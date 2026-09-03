@@ -12,7 +12,9 @@
   <script>
     (function() {
       try {
-        var t = localStorage.getItem('oakshow_theme') || 'light';
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth && window.innerWidth <= 768);
+        var savedTheme = localStorage.getItem('oakshow_theme');
+        var t = savedTheme || (isMobile ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', t);
         document.documentElement.style.colorScheme = t;
 
@@ -98,7 +100,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-77818206-1', 'auto');
   </script>
-  <script type="module" crossorigin src="/assets/index-DtHAEJGN.js"></script>
+  <script type="module" crossorigin src="/assets/index-7rfTIOBk.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-BewcZZpN.css">
 </head>
 <body>
