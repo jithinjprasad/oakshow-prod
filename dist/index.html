@@ -15,6 +15,14 @@
         var t = localStorage.getItem('oakshow_theme') || 'light';
         document.documentElement.setAttribute('data-theme', t);
         document.documentElement.style.colorScheme = t;
+
+        // Synchronously derive and set initial document.title before Analytics loads
+        var path = window.location.pathname || '';
+        var rawSlug = path.replace(/^\/+|\.html$/gi, '').replace(/^(movies|series|films)\//i, '');
+        if (rawSlug && rawSlug !== 'index' && rawSlug !== 'home' && rawSlug !== 'discover') {
+          var readable = rawSlug.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[-_]/g, ' ');
+          document.title = readable + ' All Ratings, Reviews and Watch Online — OakShow';
+        }
       } catch(e) {}
     })();
   </script>
@@ -79,7 +87,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-77818206-1', {
-      send_page_view: true
+      send_page_view: false
     });
   </script>
   <!-- Legacy Google Analytics ga() support -->
@@ -89,9 +97,8 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-77818206-1', 'auto');
-    ga('send', 'pageview');
   </script>
-  <script type="module" crossorigin src="/assets/index-vLtepwo1.js"></script>
+  <script type="module" crossorigin src="/assets/index-CsH1Wrto.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-BewcZZpN.css">
 </head>
 <body>
