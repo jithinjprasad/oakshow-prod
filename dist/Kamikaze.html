@@ -25,7 +25,7 @@
       try {
         var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth && window.innerWidth <= 768);
         var savedTheme = localStorage.getItem('oakshow_theme');
-        var t = savedTheme || (isMobile ? 'dark' : 'light');
+        var t = isMobile ? 'dark' : (savedTheme || 'light');
         document.documentElement.setAttribute('data-theme', t);
         document.documentElement.style.colorScheme = t;
         var meta = document.getElementById('theme-color-meta');
@@ -120,8 +120,8 @@ The album features guest appearances from Joyner Lucas, Royce da 5&#039;9" />
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-77818206-1', 'auto');
   </script>
-  <script type="module" crossorigin src="/assets/index-Dh8msTZI.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DPnDBYpS.css">
+  <script type="module" crossorigin src="/assets/index-Ba4USYzM.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BZ5JPcwW.css">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
