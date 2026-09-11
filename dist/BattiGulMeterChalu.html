@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" id="theme-color-meta" />
-  <meta name="color-scheme" content="light" />
+  <meta name="color-scheme" content="light dark" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=oakshow3" />
@@ -16,13 +16,15 @@
   <script>
     (function() {
       try {
-        try { localStorage.removeItem('oakshow_theme'); } catch(e) {}
-        document.documentElement.setAttribute('data-theme', 'light');
-        document.documentElement.style.colorScheme = 'light';
+        var savedTheme = localStorage.getItem('oakshow_theme');
+        var t = (savedTheme === 'dark' || savedTheme === 'light') ? savedTheme : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
 
+        var themeColor = (t === 'dark') ? '#030813' : '#ffffff';
         var metaTheme = document.getElementById('theme-color-meta') || document.querySelector('meta[name="theme-color"]');
         if (metaTheme) {
-          metaTheme.setAttribute('content', '#ffffff');
+          metaTheme.setAttribute('content', themeColor);
         }
 
         // Synchronously derive and set initial document.title before Analytics loads
@@ -37,9 +39,14 @@
   </script>
   <style>
     html, body, #root {
-      background-color: #f8fafc;
       margin: 0;
       padding: 0;
+    }
+    html[data-theme="light"], html[data-theme="light"] body, html[data-theme="light"] #root {
+      background-color: #f8fafc;
+    }
+    html[data-theme="dark"], html[data-theme="dark"] body, html[data-theme="dark"] #root {
+      background-color: #030813;
     }
     noscript {
       display: none !important;
@@ -124,8 +131,8 @@ Things were breezy until Tripathi opens a small town Printing Press. Within mont
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-77818206-1', 'auto');
   </script>
-  <script type="module" crossorigin src="/assets/index-DVzHeLEU.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-eq1Y1Pqp.css">
+  <script type="module" crossorigin src="/assets/index-NJt7eXMB.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BfQOhpbR.css">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
