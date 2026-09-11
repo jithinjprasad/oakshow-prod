@@ -12,9 +12,10 @@
   <script>
     (function() {
       try {
-        document.documentElement.setAttribute('data-theme', 'light');
-        document.documentElement.style.colorScheme = 'light';
-        try { localStorage.setItem('oakshow_theme', 'light'); } catch(e) {}
+        var savedTheme = localStorage.getItem('oakshow_theme');
+        var t = (savedTheme === 'dark') ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
 
         // Synchronously derive and set initial document.title before Analytics loads
         var path = window.location.pathname || '';
@@ -93,8 +94,8 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-77818206-1', 'auto');
   </script>
-  <script type="module" crossorigin src="/assets/index-CFwi3gQS.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DVof3Gy2.css">
+  <script type="module" crossorigin src="/assets/index-CPM2rufh.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BrZWFq3U.css">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
