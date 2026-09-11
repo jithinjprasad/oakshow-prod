@@ -21,8 +21,9 @@ Error generating stack: `+e.message+`
           padding-top: env(safe-area-inset-top, 0px);
         }
         html[data-theme="dark"] .navbar-root {
-          background: rgba(4, 14, 28, 0.98) !important;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+          background: #030813 !important;
+          border-bottom: none !important;
+          box-shadow: none !important;
         }
         .navbar-scrolled {
           background: var(--bg-surface);
@@ -31,7 +32,8 @@ Error generating stack: `+e.message+`
         }
         html[data-theme="dark"] .navbar-scrolled {
           background: #030813 !important;
-          border-bottom-color: rgba(56, 189, 248, 0.25) !important;
+          border-bottom: none !important;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
         }
 
         /* Main Navbar layout */
@@ -461,13 +463,15 @@ Error generating stack: `+e.message+`
           }
           html[data-theme="dark"] .navbar-root {
             background: #030813 !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+            border-bottom: none !important;
+            box-shadow: none !important;
             backdrop-filter: none !important;
             -webkit-backdrop-filter: none !important;
           }
           html[data-theme="dark"] .navbar-scrolled {
             background: #030813 !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+            border-bottom: none !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
             backdrop-filter: none !important;
             -webkit-backdrop-filter: none !important;
           }
