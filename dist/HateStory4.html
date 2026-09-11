@@ -12,11 +12,9 @@
   <script>
     (function() {
       try {
-        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth && window.innerWidth <= 768);
-        var savedTheme = localStorage.getItem('oakshow_theme');
-        var t = savedTheme || (isMobile ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', t);
-        document.documentElement.style.colorScheme = t;
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.style.colorScheme = 'light';
+        try { localStorage.setItem('oakshow_theme', 'light'); } catch(e) {}
 
         // Synchronously derive and set initial document.title before Analytics loads
         var path = window.location.pathname || '';
@@ -107,8 +105,8 @@ Nasty tricks, crazy ways, bitter hearts, steamy twists and driven by passion, th
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-77818206-1', 'auto');
   </script>
-  <script type="module" crossorigin src="/assets/index-CryN9r_0.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-nZVAb7WQ.css">
+  <script type="module" crossorigin src="/assets/index-CFwi3gQS.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DVof3Gy2.css">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
