@@ -454,6 +454,23 @@ Error generating stack: `+e.message+`
 
         /* Mobile Header Breakpoint (<= 1080px): Shows ONLY Search Icon & Hamburger */
         @media (max-width: 1080px) {
+          .navbar-root {
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            margin-bottom: -1px !important;
+          }
+          html[data-theme="dark"] .navbar-root {
+            background: #030813 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+          }
+          html[data-theme="dark"] .navbar-scrolled {
+            background: #030813 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+          }
           .desktop-nav {
             display: none !important;
           }
@@ -1214,7 +1231,7 @@ Error generating stack: `+e.message+`
         }
         .hero-backdrop {
           position: absolute;
-          inset: 0;
+          inset: -10px;
           background-size: cover;
           background-position: center 25%;
           filter: blur(2px) brightness(0.65);
@@ -1225,6 +1242,12 @@ Error generating stack: `+e.message+`
           position: absolute;
           inset: 0;
           background: linear-gradient(
+            to bottom,
+            #030813 0%,
+            rgba(3, 8, 19, 0.7) 15%,
+            transparent 45%
+          ),
+          linear-gradient(
             to right,
             rgba(3, 8, 19, 0.95) 0%,
             rgba(3, 8, 19, 0.8) 50%,
