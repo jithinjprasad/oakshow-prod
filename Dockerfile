@@ -1,4 +1,4 @@
-FROM nginx:alpine@sha256:72ba65eb42c10344912a84ff42408db7d34f2feb642204570ab8fc5ffd29f1d3
+FROM 172.18.0.253:5000/408d193f-88ad-4b4c-bcea-587580f4f877/oakshow:latest
 COPY dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 8080
