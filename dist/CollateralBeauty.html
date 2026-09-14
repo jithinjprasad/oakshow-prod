@@ -49,6 +49,28 @@
     noscript {
       display: none !important;
     }
+    /* Hide Firebase Auth background iframe and prevent it from rendering a white bar or top scroll offset on mobile dark theme */
+    iframe[src*="firebaseapp.com"],
+    iframe[src*="/__/auth/"],
+    iframe[id^="I0_"],
+    iframe[name^="I0"],
+    iframe[ng-non-bindable] {
+      position: fixed !important;
+      top: -9999px !important;
+      left: -9999px !important;
+      width: 0 !important;
+      height: 0 !important;
+      border: 0 !important;
+      outline: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      clip-path: inset(50%) !important;
+      background: transparent !important;
+      color-scheme: dark !important;
+      z-index: -99999 !important;
+    }
   </style>
   
   <title>Collateral Beauty All Ratings,Reviews and News</title>
@@ -123,8 +145,8 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-77818206-1', 'auto');
   </script>
-  <script type="module" crossorigin src="/assets/index-DBDNNo-4.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DKr8WlCw.css">
+  <script type="module" crossorigin src="/assets/index-DxfzAAV_.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DLObRo5O.css">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
