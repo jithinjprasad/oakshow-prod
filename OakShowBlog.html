@@ -53,28 +53,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:image" content="http://oakshow.in/blog/pics/30-feel-good-films-to-watch-during-lockdown.jpg"/>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
+
 <style>
-/* Responsive & Desktop/Mobile Optimization for Blogs */
+/* Modern Responsive & Desktop/Mobile Optimization for OakShow Blogs */
+:root {
+  --gold: #ffb800;
+  --gold-hover: #e6a600;
+  --bg-dark: #030813;
+  --card-bg: rgba(15, 23, 42, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+}
+html, body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.blog {
+  padding: 20px 0 60px;
+}
 .blog-top {
-  margin-bottom: 35px;
-  padding: 24px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 28px;
+  padding: 28px;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .blog-top:hover {
-  border-color: rgba(255, 184, 0, 0.3);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border-color: rgba(255, 184, 0, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  transform: translateY(-2px);
 }
 .blog-top img.img-responsive {
   width: 100%;
-  max-height: 460px;
+  max-height: 480px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 .blog-top h1 {
   font-size: 24px;
@@ -83,64 +105,86 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   font-weight: 700;
 }
 .blog-top h1 a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 .blog-top h1 a:hover {
-  color: #ffb800;
+  color: var(--gold);
 }
 .blog-top h5 {
-  color: #9ca3af;
+  color: var(--text-muted);
   margin-bottom: 14px;
   font-size: 13.5px;
 }
 .blog-top h5 a {
-  color: #ffb800;
-  font-weight: 600;
-}
-.blog-top p {
-  line-height: 1.65;
-  font-size: 15px;
-  color: #d1d5db;
-}
-.blog-top a.more {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 9px 24px;
-  border-radius: 6px;
+  color: var(--gold);
   font-weight: 600;
   text-decoration: none;
-  background: #ffb800;
-  color: #000;
+}
+.blog-top p {
+  line-height: 1.7;
+  font-size: 15px;
+  color: #cbd5e1;
+  margin-bottom: 14px;
+}
+.blog-top a.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 9px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13.5px;
+  text-decoration: none;
+  background: var(--gold);
+  color: #000000 !important;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 184, 0, 0.3);
 }
 .blog-top a.more:hover {
-  background: #e6a600;
+  background: var(--gold-hover);
   transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(255, 184, 0, 0.45);
 }
 .blog-sidebar {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
-  padding: 16px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 20px;
 }
 @media (max-width: 768px) {
+  .blog {
+    padding: 10px 0 40px;
+  }
   .blog-top {
-    padding: 16px;
-    margin-bottom: 25px;
+    padding: 16px 14px;
+    margin-bottom: 22px;
+  }
+  .blog-top img.img-responsive {
+    max-height: 240px;
   }
   .blog-top h1 {
-    font-size: 19px;
+    font-size: 20px;
+    line-height: 1.35;
   }
   .blog-top p {
     font-size: 14px;
+    line-height: 1.6;
+  }
+  .blog-top a.more {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 16px;
   }
   .blog-sidebar {
-    margin-top: 30px;
+    margin-top: 24px;
+    padding: 16px;
   }
 }
 </style>
+
 </head>
 <body>
 
@@ -186,14 +230,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- ARTICLE 1 -->
 		<div class="blog-top">
 			<h1>
-				<a href="blog/30-feel-good-films-to-watch-during-lockdown.html">Some of The Feel Good Movies that You Should Watch Right Now</a>
+				<a href="30-feel-good-films-to-watch-during-lockdown.html">Some of The Feel Good Movies that You Should Watch Right Now</a>
 			</h1>
-			<a href="blog/30-feel-good-films-to-watch-during-lockdown.html">
+			<a href="30-feel-good-films-to-watch-during-lockdown.html">
 				<img src="blog/pics/30-feel-good-films-to-watch-during-lockdown.jpg" class="img-responsive" alt="30 Feel Good Movies to Watch During Corona Lockdown by Jithin J Prasad"/>
 			</a>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 31-03-2020</h5>
 			<p>I know it's messed up right now across the globe, and you might be thinking about various ways to make yourself feel better, right? Well I got some good news, and that's I am going to give away the list of almost every feel-good film in almost every language that could literally boost up your mood. These are curated films that will leave you smiling and comforted. Check out the complete recommendations with streaming options.</p>
-			<a class="hvr-sweep-to-right more" href="blog/30-feel-good-films-to-watch-during-lockdown.html">Read Full Article</a>
+			<a class="hvr-sweep-to-right more" href="30-feel-good-films-to-watch-during-lockdown.html">Read Full Article</a>
 		</div>  		
 	</div>
 

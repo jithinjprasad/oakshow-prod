@@ -53,94 +53,138 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:image" content="http://oakshow.in/pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png"/>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
+
 <style>
-/* Responsive & Desktop/Mobile Optimization for Reviews */
+/* Modern Responsive & Desktop/Mobile Optimization for OakShow Reviews */
+:root {
+  --gold: #ffb800;
+  --gold-hover: #e6a600;
+  --bg-dark: #030813;
+  --card-bg: rgba(15, 23, 42, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+}
+html, body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.blog {
+  padding: 20px 0 60px;
+}
 .blog-top {
-  margin-bottom: 35px;
-  padding: 24px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 28px;
+  padding: 26px;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .blog-top:hover {
-  border-color: rgba(255, 184, 0, 0.3);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border-color: rgba(255, 184, 0, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  transform: translateY(-2px);
 }
 .blog-top img.img-responsive {
   width: 100%;
-  max-height: 460px;
+  max-height: 480px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 .blog-top h1 {
-  font-size: 22px;
+  font-size: 23px;
   line-height: 1.4;
-  margin: 14px 0 10px 0;
+  margin: 12px 0 10px 0;
   font-weight: 700;
 }
 .blog-top h1 a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 .blog-top h1 a:hover {
-  color: #ffb800;
+  color: var(--gold);
 }
 .blog-top h5 {
-  color: #9ca3af;
+  color: var(--text-muted);
   margin-bottom: 14px;
   font-size: 13.5px;
 }
 .blog-top h5 a {
-  color: #ffb800;
-  font-weight: 600;
-}
-.blog-top p {
-  line-height: 1.65;
-  font-size: 15px;
-  color: #d1d5db;
-}
-.blog-top a.more {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 9px 24px;
-  border-radius: 6px;
+  color: var(--gold);
   font-weight: 600;
   text-decoration: none;
-  background: #ffb800;
-  color: #000;
+}
+.blog-top p {
+  line-height: 1.7;
+  font-size: 15px;
+  color: #cbd5e1;
+  margin-bottom: 14px;
+}
+.blog-top a.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 9px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13.5px;
+  text-decoration: none;
+  background: var(--gold);
+  color: #000000 !important;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 184, 0, 0.3);
 }
 .blog-top a.more:hover {
-  background: #e6a600;
+  background: var(--gold-hover);
   transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(255, 184, 0, 0.45);
 }
 .blog-sidebar {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
-  padding: 16px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 20px;
 }
 @media (max-width: 768px) {
+  .blog {
+    padding: 10px 0 40px;
+  }
   .blog-top {
-    padding: 16px;
-    margin-bottom: 25px;
+    padding: 16px 14px;
+    margin-bottom: 22px;
+  }
+  .blog-top img.img-responsive {
+    max-height: 260px;
   }
   .blog-top h1 {
-    font-size: 18px;
+    font-size: 19px;
+    line-height: 1.35;
   }
   .blog-top p {
     font-size: 14px;
+    line-height: 1.6;
+  }
+  .blog-top a.more {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 16px;
   }
   .blog-sidebar {
-    margin-top: 30px;
+    margin-top: 24px;
+    padding: 16px;
   }
 }
 </style>
+
 </head>
 <body>
 
@@ -189,9 +233,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/JithinJPrasad/unpregnant-review-by-jithin-j-prasad.html">
 				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/UnpregnantReview/unpregnant-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Unpregnant Review by Jithin J Prasad" onerror="this.src='pics/Films/Unpregnant/1.jpg'"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/JithinJPrasad/unpregnant-review-by-jithin-j-prasad.html"><a href="Unpregnant.html">Unpregnant</a> Review : Getting an Abortion is Not Always a Bad Thing</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/unpregnant-review-by-jithin-j-prasad.html">Unpregnant Review : Getting an Abortion is Not Always a Bad Thing</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="4" min="0" max="5">4 out of 5</meter> 4/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 11-09-2020</h5>
 			<p>Abortion is not good...! oh really? Well, that depends on the reasons behind it, <a href="Unpregnant.html"><strong>Unpregnant</strong></a> narrates one such reason along with the reunion of two former best friends during a long road trip filled with fun and emotions.</p>	
@@ -200,16 +242,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
 		<!-- 2. KHUDA HAAFIZ -->
 		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/JithinJPrasad/khudahaafiz-review-by-jithin-j-prasad.html">
+			<a href="Profiles/CriticProfiles/JithinJPrasad/khuda-haafiz-review-by-jithin-j-prasad.html">
 				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/KhudaHaafizReview/khuda-haafiz-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Khuda Haafiz Review by Jithin J Prasad"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/JithinJPrasad/khudahaafiz-review-by-jithin-j-prasad.html"><a href="KhudaHaafiz.html">Khuda Haafiz</a> Review: You Can Watch it Without a Second Thought</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/khuda-haafiz-review-by-jithin-j-prasad.html">Khuda Haafiz Review: You Can Watch it Without a Second Thought</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="4" min="0" max="5">4 out of 5</meter> 4/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 30-07-2020</h5>
 			<p>Following The late actor Jayan and Khiladi Akshay Kumar, Vidyut Jammwal with no doubt is the biggest action star in Indian cinema. With this film, he showed us that his acting is as remarkable as his martial artistry.</p>	
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/JithinJPrasad/khudahaafiz-review-by-jithin-j-prasad.html">Read Full Review</a>
+			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/JithinJPrasad/khuda-haafiz-review-by-jithin-j-prasad.html">Read Full Review</a>
 		</div>  		
 	
 		<!-- 3. YAARA -->
@@ -217,9 +257,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/JithinJPrasad/yaara-review-by-jithin-j-prasad.html">
 				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/YaaraReview/yaara-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Yaara Review by Jithin J Prasad"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/JithinJPrasad/yaara-review-by-jithin-j-prasad.html"><a href="Yaara.html">Yaara</a> Review by Jithin J Prasad: Not as Cliche as You Think</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/yaara-review-by-jithin-j-prasad.html">Yaara Review by Jithin J Prasad: Not as Cliche as You Think</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3.5" min="0" max="5">3.5 out of 5</meter> 3.5/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 30-07-2020</h5>
 			<p>Is <a href="Yaara.html"><strong>Yaara</strong></a> really a movie about friendship? As for me, it's about a bunch of loyal friends who navigate life, rebellion, and consequences together across eras.</p>	
@@ -231,9 +269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/JithinJPrasad/dil-bechara-review-by-jithin-j-prasad.html">
 				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/DilBecharaReview/dil-bechara-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Dil Bechara Review by Jithin J Prasad"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/JithinJPrasad/dil-bechara-review-by-jithin-j-prasad.html"><a href="DilBechara.html">Dil Bechara</a> Review: You Couldn't Have Asked for Better</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/dil-bechara-review-by-jithin-j-prasad.html">Dil Bechara Review: You Couldn't Have Asked for Better</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="5" min="0" max="5">5 out of 5</meter> 5/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 24-07-2020</h5>
 			<p>An emotional and heart-touching experience honoring the radiant memory and sublime performance of Sushant Singh Rajput alongside Sanjana Sanghi.</p>
@@ -245,9 +281,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/JithinJPrasad/dia-review-by-jithin-j-prasad.html">
 				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/DiaReview/dia-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Dia Review by Jithin J Prasad"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/JithinJPrasad/dia-review-by-jithin-j-prasad.html"><a href="Dia.html">Dia</a> Review: A Must Watch Heartwarming Movie That Will Make You Cry</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/dia-review-by-jithin-j-prasad.html">Dia Review: A Must Watch Heartwarming Movie That Will Make You Cry</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="4.5" min="0" max="5">4.5 out of 5</meter> 4.5/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 31-05-2020</h5>
 			<p>Have you ever watched a film that makes your heart ache with love and bittersweet wonder? <a href="Dia.html"><strong>Dia</strong></a> is an unforgettable emotional triumph from Kannada cinema.</p>
@@ -259,9 +293,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/JithinJPrasad/dark-waters-review-by-jithin-j-prasad.html">
 				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/DarkWatersReview/dark-waters-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Dark Waters Review by Jithin J Prasad"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/JithinJPrasad/dark-waters-review-by-jithin-j-prasad.html"><a href="DarkWaters.html">Dark Waters</a> Review | A Single Man V/S A Multibillion Dollar Corporate</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/dark-waters-review-by-jithin-j-prasad.html">Dark Waters Review | A Single Man V/S A Multibillion Dollar Corporate</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="4.25" min="0" max="5">4.25 out of 5</meter> 4.25/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 04-02-2020</h5>
 			<p>A gripping true legal drama showing one attorney's dogged perseverance against corporate giants. Mark Ruffalo gives one of his finest dramatic performances.</p>
@@ -273,9 +305,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/godzilla-king-of-the-monsters-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/GodzillaKingoftheMonstersReview/godzilla-king-of-the-monsters-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Godzilla: King of the Monsters Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/godzilla-king-of-the-monsters-review-by-abhijith-a-g.html"><a href="GodzillaKingoftheMonsters.html">Godzilla: King of the Monsters</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/godzilla-king-of-the-monsters-review-by-abhijith-a-g.html">Godzilla: King of the Monsters Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe Watch" style="width:40px;height:40px"></a><meter value="3" min="0" max="5">3 out of 5</meter> 3/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 02-06-2019</h5>	
 			<p>Genre: Fantasy/Sci-Fi | Language: English | Year: 2019</p>
@@ -288,9 +318,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/john-wick-chapter-3-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/JohnWickChapter3ParabellumReview/john-wick-chapter-3-review-by-abhijith-a-g.jpg" class="img-responsive" alt="John Wick: Chapter 3 – Parabellum Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/john-wick-chapter-3-review-by-abhijith-a-g.html"><a href="JohnWickChapter3Parabellum.html">John Wick: Chapter 3 – Parabellum</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/john-wick-chapter-3-review-by-abhijith-a-g.html">John Wick: Chapter 3 – Parabellum Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe Watch" style="width:40px;height:40px"></a><meter value="3.5" min="0" max="5">3.5 out of 5</meter> 3.5/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 18-05-2019</h5>	
 			<p>Genre: Action Thriller | Language: English | Year: 2019</p>
@@ -303,9 +331,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/avengers-endgame-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/AvengersEndgameReview/avengers-endgame-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Avengers: Endgame Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/avengers-endgame-review-by-abhijith-a-g.html"><a href="AvengersEndgame.html">Avengers: Endgame</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/avengers-endgame-review-by-abhijith-a-g.html">Avengers: Endgame Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="4" min="0" max="5">4 out of 5</meter> 4/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 29-04-2019</h5>	
 			<p>Genre: Superhero / Fantasy | Language: English | Year: 2019</p>
@@ -318,9 +344,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/us-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/UsReview/us-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Us (2019 film) Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/us-review-by-abhijith-a-g.html"><a href="Us.html">Us (2019 film)</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/us-review-by-abhijith-a-g.html">Us (2019 film) Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3" min="0" max="5">3 out of 5</meter> 3/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 03-04-2019</h5>	
 			<p>Genre: Mystery/Thriller | Language: English | Year: 2019</p>
@@ -333,9 +357,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/lucifer-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/LuciferReview/lucifer-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Lucifer Review by Abhijith A G" onerror="this.src='pics/Films/Lucifer/1.jpg'"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/lucifer-review-by-abhijith-a-g.html"><a href="Lucifer.html">Lucifer</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/lucifer-review-by-abhijith-a-g.html">Lucifer Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3.5" min="0" max="5">3.5 out of 5</meter> 3.5/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 31-03-2019</h5>	
 			<p>Genre: Drama / Political Thriller | Language: Malayalam | Year: 2019</p>
@@ -348,9 +370,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/captain-marvel-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/CaptainMarvelReview/captain-marvel-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Captain Marvel Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/captain-marvel-review-by-abhijith-a-g.html"><a href="CaptainMarvel.html">Captain Marvel</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/captain-marvel-review-by-abhijith-a-g.html">Captain Marvel Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3" min="0" max="5">3 out of 5</meter> 3/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 09-02-2019</h5>	
 			<p>Genre: Superhero | Language: English | Year: 2019</p>
@@ -363,9 +383,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/the-quake-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/TheQuakeReview/the-quake-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Skjelvet/The Quake Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/the-quake-review-by-abhijith-a-g.html"><a href="TheQuake.html">Skjelvet/The Quake</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/the-quake-review-by-abhijith-a-g.html">Skjelvet/The Quake Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Above Average Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-this-one-is-above-average.png" alt="Above Average" style="width:40px;height:40px"></a><meter value="2.5" min="0" max="5">2.5 out of 5</meter> 2.5/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 04-03-2019</h5>	
 			<p>Genre: Disaster Film | Language: Norwegian | Year: 2018</p>
@@ -378,9 +396,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/alita-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/AlitaBattleAngelReview/alita-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Alita: Battle Angel Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/alita-review-by-abhijith-a-g.html"><a href="AlitaBattleAngel.html">Alita: Battle Angel</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/alita-review-by-abhijith-a-g.html">Alita: Battle Angel Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3" min="0" max="5">3 out of 5</meter> 3/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 09-02-2019</h5>	
 			<p>Genre: Science Fiction / Fantasy | Language: English | Year: 2019</p>
@@ -393,9 +409,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/polar-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/PolarReview/polar-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Polar Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/polar-review-by-abhijith-a-g.html"><a href="Polar.html">Polar</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/polar-review-by-abhijith-a-g.html">Polar Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3" min="0" max="5">3 out of 5</meter> 3/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 25-01-2019</h5>	
 			<p>Genre: Action Thriller | Language: English | Year: 2019</p>
@@ -408,9 +422,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/uri-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/UriReview/uri-the-surgical-strike-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Uri: The Surgical Strike Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/uri-review-by-abhijith-a-g.html"><a href="UriTheSurgicalStrike.html">Uri: The Surgical Strike</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/uri-review-by-abhijith-a-g.html">Uri: The Surgical Strike Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="4" min="0" max="5">4 out of 5</meter> 4/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 19-01-2019</h5>	
 			<p>Genre: War Drama / Action Thriller | Language: Hindi | Year: 2019</p>
@@ -423,9 +435,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/bumblebee-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/BumblebeeReview/bumblebee-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Bumblebee Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/bumblebee-review-by-abhijith-a-g.html"><a href="Bumblebee.html">Bumblebee</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/bumblebee-review-by-abhijith-a-g.html">Bumblebee Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3.5" min="0" max="5">3.5 out of 5</meter> 3.5/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 06-01-2019</h5>	
 			<p>Genre: Science Fiction / Action | Language: English | Year: 2018</p>
@@ -438,9 +448,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/aquaman-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/AquamanReview/aquaman-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Aquaman Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/aquaman-review-by-abhijith-a-g.html"><a href="Aquaman.html">Aquaman</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/aquaman-review-by-abhijith-a-g.html">Aquaman Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3.5" min="0" max="5">3.5 out of 5</meter> 3.5/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 30-12-2018</h5>	
 			<p>Genre: Superhero / Fantasy | Language: English | Year: 2018</p>
@@ -453,9 +461,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/creed-II-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/CreedIIReview/creed-II-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Creed II Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/creed-II-review-by-abhijith-a-g.html"><a href="CreedII.html">Creed II</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/creed-II-review-by-abhijith-a-g.html">Creed II Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3.5" min="0" max="5">3.5 out of 5</meter> 3.5/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 30-11-2018</h5>	
 			<p>Genre: Sports / Drama | Language: English | Year: 2018</p>
@@ -468,9 +474,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/fantastic-beasts-the-crimes-of-grindelwald-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/FantasticBeastsTheCrimesofGrindelwaldReview/fantastic-beasts-the-crimes-of-grindelwald-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Fantastic Beasts: The Crimes of Grindelwald Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/fantastic-beasts-the-crimes-of-grindelwald-review-by-abhijith-a-g.html"><a href="FantasticBeastsTheCrimesofGrindelwald.html">Fantastic Beasts: The Crimes of Grindelwald</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/fantastic-beasts-the-crimes-of-grindelwald-review-by-abhijith-a-g.html">Fantastic Beasts: The Crimes of Grindelwald Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Above Average Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-this-one-is-above-average.png" alt="Above Average" style="width:40px;height:40px"></a><meter value="2.5" min="0" max="5">2.5 out of 5</meter> 2.5/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 17-11-2018</h5>
 			<p>Genre: Fantasy / Adventure | Language: English | Year: 2018</p>
@@ -483,9 +487,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/JithinJPrasad/johny-english-strikes-again-honest-review-by-jithin-j-prasad.html">
 				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/JohnnyEnglishStrikesAgainReview/johny-english-strikes-again-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Johnny English Strikes Again Review by Jithin J Prasad"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/JithinJPrasad/johny-english-strikes-again-honest-review-by-jithin-j-prasad.html"><a href="JohnnyEnglishStrikesAgain.html">Johnny English Strikes Again</a> | Review by Jithin J Prasad</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/johny-english-strikes-again-honest-review-by-jithin-j-prasad.html">Johnny English Strikes Again | Review by Jithin J Prasad</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3.25" min="0" max="5">3.25 out of 5</meter> 3.25/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 21-10-2018</h5>
 			<p>If you are bored and looking for some comedy to make your day, go for Johnny English: Strikes Again. Rowan Atkinson's timeless comedy delivers pure laughs.</p>
@@ -497,9 +499,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="Profiles/CriticProfiles/AbhijithAG/kayamkulam-kochunni-review-by-abhijith-a-g.html">
 				<img src="Profiles/CriticProfiles/AbhijithAG/pics/KayamkulamKochunniReview/kayamkulam-kochunni-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Kayamkulam Kochunni Review by Abhijith A G"/>
 			</a>
-			<h1>
-				<a href="Profiles/CriticProfiles/AbhijithAG/kayamkulam-kochunni-review-by-abhijith-a-g.html"><a href="KayamkulamKochunni.html">Kayamkulam Kochunni</a> Review by Abhijith A G</a>
-			</h1>
+			<h1><a href="Profiles/CriticProfiles/AbhijithAG/kayamkulam-kochunni-review-by-abhijith-a-g.html">Kayamkulam Kochunni Review by Abhijith A G</a></h1>
 			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3" min="0" max="5">3 out of 5</meter> 3/5<br>
 			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 12-10-2018</h5>
 			<p>Genre: Historical Drama / Action Thriller | Language: Malayalam | Year: 2018</p>
