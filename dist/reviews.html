@@ -1,557 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="light" style="color-scheme: light;">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K686R3P');</script>
-<!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" id="theme-color-meta" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=oakshow3" />
+  <link rel="icon" type="image/png" sizes="300x300" href="/favicon.png?v=oakshow3" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=oakshow3" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=oakshow3" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=oakshow3" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=oakshow3" />
+  <script>
+    (function() {
+      try {
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth && window.innerWidth <= 768);
+        var savedTheme = localStorage.getItem('oakshow_theme_v3') || localStorage.getItem('oakshow_theme_v2') || localStorage.getItem('oakshow_theme');
+        if (!localStorage.getItem('oakshow_theme_v3')) {
+          savedTheme = isMobile ? 'dark' : 'light';
+          localStorage.setItem('oakshow_theme_v3', savedTheme);
+        }
+        var t = (savedTheme === 'dark') ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
 
-<link rel="icon" type="image/png" href="favicon.png">
-<title>Reviews by The Critics at OakShow</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
-<!-- Custom Theme files -->
-<!--menu-->
-<script src="js/scripts.js"></script>
-<link href="css/styles.css" rel="stylesheet">
-<!--//menu-->
-<!--YoutubeVideos-->
-<script src="js/youtube.js"></script>
-<link href="css/youtube.css" rel="stylesheet">
-<!--//YoutubeVideos-->
-<!--theme-style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
-<!--//theme-style-->
-<!--navBar-->
-<script src="js/navBar.js"></script>
-<link href="css/navBar.css" rel="stylesheet">
-<!--//navBar-->
-<!--effects-->
-<script src="js/effects3.js"></script>
-<!--//effects-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="Check verified movie reviews and ratings by The Critics at OakShow. Unbiased criticism, certified reviewer profiles, and OakShow official remarks.">
-<meta name="keywords" content="Reviews by The Critics at OakShow, movie reviews, Jithin J Prasad reviews, Abhijith A G reviews" />
-<meta name="author" content="OakShow" />
-<meta property="article:tag" content="Check The Reviews by The Critics at OakShow" />
-<meta name="rating" content="general" />
-<meta property="og:type" content="article" />
-<meta property="og:site_name" content="OakShow" />
-<meta property="og:title" content="Reviews by The Critics at OakShow" />
-<meta property="og:description" content="Check verified movie reviews and ratings by The Critics at OakShow." />
-<meta property="og:image" content="http://oakshow.in/pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:site" content="@oak_show"/>
-<meta name="twitter:creator" content="@oak_show"/>
-<meta name="twitter:title" content="Reviews by The Critics at OakShow"/>
-<meta name="twitter:description" content="Check The Reviews by The Critics at OakShow"/>
-<meta name="twitter:image" content="http://oakshow.in/pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png"/>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        // Immediately sync mobile browser theme-color status bar before initial paint
+        var themeColor = (t === 'dark') ? '#030813' : '#ffffff';
+        var metaTheme = document.getElementById('theme-color-meta') || document.querySelector('meta[name="theme-color"]');
+        if (metaTheme) {
+          metaTheme.setAttribute('content', themeColor);
+        }
 
+        // Synchronously derive and set initial document.title before Analytics loads
+        var path = window.location.pathname || '';
+        var rawSlug = path.replace(/^\/+|\.html$/gi, '').replace(/^(movies|series|films)\//i, '');
+        if (rawSlug && rawSlug !== 'index' && rawSlug !== 'home' && rawSlug !== 'discover') {
+          var readable = rawSlug.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[-_]/g, ' ');
+          document.title = readable + ' All Ratings, Reviews and Watch Online — OakShow';
+        }
+      } catch(e) {}
+    })();
+  </script>
+  <style>
+    noscript {
+      display: none !important;
+    }
+    /* Hide Firebase Auth background iframe and prevent it from rendering a white bar or top scroll offset on mobile dark theme */
+    iframe[src*="firebaseapp.com"],
+    iframe[src*="/__/auth/"],
+    iframe[id^="I0_"],
+    iframe[name^="I0"],
+    iframe[ng-non-bindable] {
+      position: fixed !important;
+      top: -9999px !important;
+      left: -9999px !important;
+      width: 0 !important;
+      height: 0 !important;
+      border: 0 !important;
+      outline: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      clip-path: inset(50%) !important;
+      background: transparent !important;
+      color-scheme: dark !important;
+      z-index: -99999 !important;
+    }
+  </style>
+  
+  <title>OakShow Editorial &amp; Critic Reviews — Certified Ratings &amp; Remarks</title>
+  <meta name="description" content="Unbiased film criticism, certified reviewer profiles, and OakShow official remarks." />
+  <meta name="keywords" content="OakShow, movie reviews, ratings, cinema, Hollywood, Bollywood, Tollywood, Mollywood, Kollywood, upcoming movies, release calendar, critic reviews, showtimes, BookMyShow" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://oakshow.in/reviews.html" />
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:site_name" content="OakShow" />
+  <meta property="og:title" content="OakShow Editorial &amp; Critic Reviews — Certified Ratings &amp; Remarks" />
+  <meta property="og:description" content="Unbiased film criticism, certified reviewer profiles, and OakShow official remarks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://oakshow.in/reviews.html" />
+  <meta property="og:image" content="https://oakshow.in/favicon.png" />
 
-<style>
-/* Modern Responsive & Desktop/Mobile Optimization for OakShow Reviews */
-:root {
-  --gold: #ffb800;
-  --gold-hover: #e6a600;
-  --bg-dark: #030813;
-  --card-bg: rgba(15, 23, 42, 0.75);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --text-main: #f1f5f9;
-  --text-muted: #94a3b8;
-}
-html, body {
-  background-color: var(--bg-dark);
-  color: var(--text-main);
-  max-width: 100%;
-  overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-.blog {
-  padding: 20px 0 60px;
-}
-.blog-top {
-  margin-bottom: 28px;
-  padding: 26px;
-  background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--card-border);
-  border-radius: 14px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.blog-top:hover {
-  border-color: rgba(255, 184, 0, 0.35);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
-  transform: translateY(-2px);
-}
-.blog-top img.img-responsive {
-  width: 100%;
-  max-height: 480px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 18px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-}
-.blog-top h1 {
-  font-size: 23px;
-  line-height: 1.4;
-  margin: 12px 0 10px 0;
-  font-weight: 700;
-}
-.blog-top h1 a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-.blog-top h1 a:hover {
-  color: var(--gold);
-}
-.blog-top h5 {
-  color: var(--text-muted);
-  margin-bottom: 14px;
-  font-size: 13.5px;
-}
-.blog-top h5 a {
-  color: var(--gold);
-  font-weight: 600;
-  text-decoration: none;
-}
-.blog-top p {
-  line-height: 1.7;
-  font-size: 15px;
-  color: #cbd5e1;
-  margin-bottom: 14px;
-}
-.blog-top a.more {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 10px;
-  padding: 9px 24px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 13.5px;
-  text-decoration: none;
-  background: var(--gold);
-  color: #000000 !important;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(255, 184, 0, 0.3);
-}
-.blog-top a.more:hover {
-  background: var(--gold-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(255, 184, 0, 0.45);
-}
-.blog-sidebar {
-  background: rgba(15, 23, 42, 0.5);
-  border: 1px solid var(--card-border);
-  border-radius: 12px;
-  padding: 20px;
-}
-@media (max-width: 768px) {
-  .blog {
-    padding: 10px 0 40px;
-  }
-  .blog-top {
-    padding: 16px 14px;
-    margin-bottom: 22px;
-  }
-  .blog-top img.img-responsive {
-    max-height: 260px;
-  }
-  .blog-top h1 {
-    font-size: 19px;
-    line-height: 1.35;
-  }
-  .blog-top p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  .blog-top a.more {
-    width: 100%;
-    justify-content: center;
-    padding: 11px 16px;
-  }
-  .blog-sidebar {
-    margin-top: 24px;
-    padding: 16px;
-  }
-}
-</style>
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@OakShow" />
+  <meta name="twitter:creator" content="@OakShow" />
+  <meta name="twitter:title" content="OakShow Editorial &amp; Critic Reviews — Certified Ratings &amp; Remarks" />
+  <meta name="twitter:description" content="Unbiased film criticism, certified reviewer profiles, and OakShow official remarks." />
+  <meta name="twitter:image" content="https://oakshow.in/favicon.png" />
 
+  <!-- Schema.org JSON-LD Organization Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "OakShow",
+    "url": "https://oakshow.in",
+    "logo": "https://oakshow.in/favicon.png",
+    "sameAs": [
+      "https://www.instagram.com/oak_show/",
+      "https://www.facebook.com/OakShowReal/",
+      "https://x.com/oak_show?lang=uk",
+      "https://www.youtube.com/@OakShow",
+      "https://www.linkedin.com/company/oakshow"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K686R3P');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77818206-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-77818206-1', {
+      send_page_view: false
+    });
+  </script>
+  <!-- Legacy Google Analytics ga() support -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-77818206-1', 'auto');
+  </script>
+  <script type="module" crossorigin src="/assets/index-DAHWZmpK.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DrFqUK7t.css">
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K686R3P"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="root"></div>
+<noscript>
+<div class="oakshow-crawler-fallback" style="padding:24px;font-family:sans-serif;color:#fff;background:#0d1117;">
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K686R3P"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<!--header-->	
-	<script language="javascript" type="text/javascript" src="header.txt"></script>	
-	<!---pop-up-box---->
-	<script>
-		$(document).ready(function() {
-			$('.popup-with-zoom-anim').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in'
-			});
-		});
-	</script>
-	</div>
-	<div class="clearfix"> </div>
-	</div>	
+      <h1>OakShow Editorial &amp; Critic Reviews — Certified Ratings &amp; Remarks</h1>
+      <p>Unbiased film criticism, certified reviewer profiles, and OakShow official remarks.</p>
+      <p><a href="https://oakshow.in/">Explore OakShow Homepage</a></p>
+    
 </div>
-<!--//header-->
-
-<!--blog-->
-<div class="blog">
-<div class="container">
-
-	<div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1);">
-		<h3 style="color:#ffb800; font-size:26px; font-weight:700; margin-top:0;">Reviews by Our Critics</h3>
-		<p style="color:#9ca3af; font-size:14px; margin-bottom:0;">Verified film criticism, certified reviewer opinions, and official OakShow verdict remarks.</p>
-	</div>
-
-	<div class="col-md-9 blog-head">		
-	
-		<!-- 1. UNPREGNANT -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/JithinJPrasad/unpregnant-review-by-jithin-j-prasad.html">
-				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/UnpregnantReview/unpregnant-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Unpregnant Review by Jithin J Prasad" onerror="this.src='pics/Films/Unpregnant/1.jpg'"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/unpregnant-review-by-jithin-j-prasad.html">Unpregnant Review : Getting an Abortion is Not Always a Bad Thing</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="4" min="0" max="5">4 out of 5</meter> 4/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 11-09-2020</h5>
-			<p>Abortion is not good...! oh really? Well, that depends on the reasons behind it, <a href="Unpregnant.html"><strong>Unpregnant</strong></a> narrates one such reason along with the reunion of two former best friends during a long road trip filled with fun and emotions.</p>	
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/JithinJPrasad/unpregnant-review-by-jithin-j-prasad.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 2. KHUDA HAAFIZ -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/JithinJPrasad/khuda-haafiz-review-by-jithin-j-prasad.html">
-				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/KhudaHaafizReview/khuda-haafiz-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Khuda Haafiz Review by Jithin J Prasad"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/khuda-haafiz-review-by-jithin-j-prasad.html">Khuda Haafiz Review: You Can Watch it Without a Second Thought</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="4" min="0" max="5">4 out of 5</meter> 4/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 30-07-2020</h5>
-			<p>Following The late actor Jayan and Khiladi Akshay Kumar, Vidyut Jammwal with no doubt is the biggest action star in Indian cinema. With this film, he showed us that his acting is as remarkable as his martial artistry.</p>	
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/JithinJPrasad/khuda-haafiz-review-by-jithin-j-prasad.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 3. YAARA -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/JithinJPrasad/yaara-review-by-jithin-j-prasad.html">
-				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/YaaraReview/yaara-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Yaara Review by Jithin J Prasad"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/yaara-review-by-jithin-j-prasad.html">Yaara Review by Jithin J Prasad: Not as Cliche as You Think</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3.5" min="0" max="5">3.5 out of 5</meter> 3.5/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 30-07-2020</h5>
-			<p>Is <a href="Yaara.html"><strong>Yaara</strong></a> really a movie about friendship? As for me, it's about a bunch of loyal friends who navigate life, rebellion, and consequences together across eras.</p>	
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/JithinJPrasad/yaara-review-by-jithin-j-prasad.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 4. DIL BECHARA -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/JithinJPrasad/dil-bechara-review-by-jithin-j-prasad.html">
-				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/DilBecharaReview/dil-bechara-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Dil Bechara Review by Jithin J Prasad"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/dil-bechara-review-by-jithin-j-prasad.html">Dil Bechara Review: You Couldn't Have Asked for Better</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="5" min="0" max="5">5 out of 5</meter> 5/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 24-07-2020</h5>
-			<p>An emotional and heart-touching experience honoring the radiant memory and sublime performance of Sushant Singh Rajput alongside Sanjana Sanghi.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/JithinJPrasad/dil-bechara-review-by-jithin-j-prasad.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 5. DIA -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/JithinJPrasad/dia-review-by-jithin-j-prasad.html">
-				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/DiaReview/dia-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Dia Review by Jithin J Prasad"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/dia-review-by-jithin-j-prasad.html">Dia Review: A Must Watch Heartwarming Movie That Will Make You Cry</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="4.5" min="0" max="5">4.5 out of 5</meter> 4.5/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 31-05-2020</h5>
-			<p>Have you ever watched a film that makes your heart ache with love and bittersweet wonder? <a href="Dia.html"><strong>Dia</strong></a> is an unforgettable emotional triumph from Kannada cinema.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/JithinJPrasad/dia-review-by-jithin-j-prasad.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 6. DARK WATERS -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/JithinJPrasad/dark-waters-review-by-jithin-j-prasad.html">
-				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/DarkWatersReview/dark-waters-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Dark Waters Review by Jithin J Prasad"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/dark-waters-review-by-jithin-j-prasad.html">Dark Waters Review | A Single Man V/S A Multibillion Dollar Corporate</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="4.25" min="0" max="5">4.25 out of 5</meter> 4.25/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 04-02-2020</h5>
-			<p>A gripping true legal drama showing one attorney's dogged perseverance against corporate giants. Mark Ruffalo gives one of his finest dramatic performances.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/JithinJPrasad/dark-waters-review-by-jithin-j-prasad.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 7. GODZILLA: KING OF THE MONSTERS -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/godzilla-king-of-the-monsters-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/GodzillaKingoftheMonstersReview/godzilla-king-of-the-monsters-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Godzilla: King of the Monsters Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/godzilla-king-of-the-monsters-review-by-abhijith-a-g.html">Godzilla: King of the Monsters Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe Watch" style="width:40px;height:40px"></a><meter value="3" min="0" max="5">3 out of 5</meter> 3/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 02-06-2019</h5>	
-			<p>Genre: Fantasy/Sci-Fi | Language: English | Year: 2019</p>
-			<p>ഗോഡ്‌സില്ല 2014 സിനിമയുടെ രണ്ടാം ഭാഗവും, ഗോഡ്‌സില്ല ഫ്രാഞ്ചൈസിയിലെ മുപ്പത്തിഅഞ്ചാമത്തെ സിനിമയും, ഹോളിവുഡ് സ്റ്റുഡിയോ നിർമ്മിച്ച വമ്പൻ മോൺസ്റ്റർ വിരുന്നാണ് ഈ ചിത്രം.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/godzilla-king-of-the-monsters-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 8. JOHN WICK 3 -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/john-wick-chapter-3-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/JohnWickChapter3ParabellumReview/john-wick-chapter-3-review-by-abhijith-a-g.jpg" class="img-responsive" alt="John Wick: Chapter 3 – Parabellum Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/john-wick-chapter-3-review-by-abhijith-a-g.html">John Wick: Chapter 3 – Parabellum Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe Watch" style="width:40px;height:40px"></a><meter value="3.5" min="0" max="5">3.5 out of 5</meter> 3.5/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 18-05-2019</h5>	
-			<p>Genre: Action Thriller | Language: English | Year: 2019</p>
-			<p>ജോൺവിക്ക് ആക്ഷൻ ത്രില്ലെർ സിനിമ സീരിസിലെ അതിശയിപ്പിക്കുന്ന മൂന്നാമത്തെ സിനിമയാണ് ജോൺ വിക്ക് 3 പാരബെല്ലം. കീനു റീവ്സിന്റെ മാസ്മരിക ആക്ഷൻ രംഗങ്ങൾ തിയേറ്ററിൽ തന്നെ കാണേണ്ട ഒന്നാണ്.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/john-wick-chapter-3-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 9. AVENGERS: ENDGAME -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/avengers-endgame-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/AvengersEndgameReview/avengers-endgame-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Avengers: Endgame Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/avengers-endgame-review-by-abhijith-a-g.html">Avengers: Endgame Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="4" min="0" max="5">4 out of 5</meter> 4/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 29-04-2019</h5>	
-			<p>Genre: Superhero / Fantasy | Language: English | Year: 2019</p>
-			<p>മാർവെൽ സിനിമാറ്റിക് യൂണിവേഴ്സിന്റെ (MCU) 22-ാമത്തെ ചിത്രവും അവഞ്ചേഴ്സ് പരമ്പരയുടെ വികാരനിർഭരവും ബൃഹത്തുമായ പര്യവസാനമാണ് അവഞ്ചേഴ്സ് എൻഡ്ഗെയിം.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/avengers-endgame-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 10. US (2019) -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/us-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/UsReview/us-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Us (2019 film) Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/us-review-by-abhijith-a-g.html">Us (2019 film) Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3" min="0" max="5">3 out of 5</meter> 3/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 03-04-2019</h5>	
-			<p>Genre: Mystery/Thriller | Language: English | Year: 2019</p>
-			<p>ഓസ്കാർ പുരസ്കാര ജേതാവായ ജോർദാൻ പീൽ രചനയും സംവിധാനവും നിർവ്വഹിച്ച അത്യന്തം ചിന്തോദ്ദീപകമായ സൈക്കോളജിക്കൽ ഹൊറർ ത്രില്ലർ.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/us-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 11. LUCIFER -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/lucifer-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/LuciferReview/lucifer-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Lucifer Review by Abhijith A G" onerror="this.src='pics/Films/Lucifer/1.jpg'"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/lucifer-review-by-abhijith-a-g.html">Lucifer Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3.5" min="0" max="5">3.5 out of 5</meter> 3.5/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 31-03-2019</h5>	
-			<p>Genre: Drama / Political Thriller | Language: Malayalam | Year: 2019</p>
-			<p>പൃഥ്വിരാജിന്റെ അരങ്ങേറ്റ സംവിധാനത്തിൽ മോഹൻലാലിന്റെ സ്റ്റൈലിഷ് മാസ് അവതാരമായ സ്റ്റീഫൻ നെടുമ്പള്ളി / അബ്രാം ഖുറേഷി മോളിവുഡ് ബോക്സ് ഓഫീസിൽ സൃഷ്ടിച്ച കൊടുങ്കാറ്റ്.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/lucifer-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 12. CAPTAIN MARVEL -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/captain-marvel-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/CaptainMarvelReview/captain-marvel-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Captain Marvel Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/captain-marvel-review-by-abhijith-a-g.html">Captain Marvel Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3" min="0" max="5">3 out of 5</meter> 3/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 09-02-2019</h5>	
-			<p>Genre: Superhero | Language: English | Year: 2019</p>
-			<p>മാർവെൽ സിനിമാറ്റിക് യൂണിവേഴ്സിലെ ആദ്യ ഫീമെയിൽ സോളോ സൂപ്പർഹീറോ സിനിമയാണ് ക്യാപ്റ്റൻ മാർവെൽ.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/captain-marvel-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 13. THE QUAKE -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/the-quake-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/TheQuakeReview/the-quake-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Skjelvet/The Quake Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/the-quake-review-by-abhijith-a-g.html">Skjelvet/The Quake Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Above Average Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-this-one-is-above-average.png" alt="Above Average" style="width:40px;height:40px"></a><meter value="2.5" min="0" max="5">2.5 out of 5</meter> 2.5/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 04-03-2019</h5>	
-			<p>Genre: Disaster Film | Language: Norwegian | Year: 2018</p>
-			<p>2015-ൽ ഇറങ്ങിയ പ്രശസ്ത നോർവീജിയൻ ഡിസാസ്റ്റർ സിനിമ 'The Wave'-ന്റെ തുടർച്ചയായ ഉദ്വേഗഭരിത ചിത്രം.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/the-quake-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 14. ALITA: BATTLE ANGEL -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/alita-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/AlitaBattleAngelReview/alita-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Alita: Battle Angel Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/alita-review-by-abhijith-a-g.html">Alita: Battle Angel Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3" min="0" max="5">3 out of 5</meter> 3/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 09-02-2019</h5>	
-			<p>Genre: Science Fiction / Fantasy | Language: English | Year: 2019</p>
-			<p>ജാപ്പനീസ് കോമിക് ഗ്രാഫിക് നോവൽ "Gunnm" ആസ്പദമാക്കി ജെയിംസ് കാമറോൺ രചന നിർവ്വഹിച്ച വിഷ്വൽ മാജിക് ചിത്രം.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/alita-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 15. POLAR -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/polar-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/PolarReview/polar-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Polar Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/polar-review-by-abhijith-a-g.html">Polar Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3" min="0" max="5">3 out of 5</meter> 3/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 25-01-2019</h5>	
-			<p>Genre: Action Thriller | Language: English | Year: 2019</p>
-			<p>Polar എന്ന ഡാർക്ക് ഹോഴ്സ് കോമിക്കിന്റെ ഗ്രാഫിക് നോവൽ ആസ്പദമാക്കിയെടുത്ത സ്റ്റൈലിഷ് ആക്ഷൻ ചിത്രം.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/polar-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 16. URI: THE SURGICAL STRIKE -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/uri-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/UriReview/uri-the-surgical-strike-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Uri: The Surgical Strike Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/uri-review-by-abhijith-a-g.html">Uri: The Surgical Strike Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Must Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-a-must-watch.png" alt="Must Watch" style="width:40px;height:40px"></a><meter value="4" min="0" max="5">4 out of 5</meter> 4/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 19-01-2019</h5>	
-			<p>Genre: War Drama / Action Thriller | Language: Hindi | Year: 2019</p>
-			<p>2016-ൽ ഇന്ത്യൻ ആർമി പാക് അധീന കശ്മീരിൽ നടത്തിയ സർജിക്കൽ സ്ട്രൈക്ക് പശ്ചാത്തലമാക്കിയുള്ള മികച്ച ദേശഭക്തി സിനിമ.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/uri-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 17. BUMBLEBEE -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/bumblebee-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/BumblebeeReview/bumblebee-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Bumblebee Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/bumblebee-review-by-abhijith-a-g.html">Bumblebee Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3.5" min="0" max="5">3.5 out of 5</meter> 3.5/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 06-01-2019</h5>	
-			<p>Genre: Science Fiction / Action | Language: English | Year: 2018</p>
-			<p>ട്രാൻസ്ഫോർമേഴ്സ് പരമ്പരയിലെ ഏറ്റവും ഹൃദ്യവും മനോഹരവുമായ സ്പിൻ-ഓഫ് ചിത്രം.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/bumblebee-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 18. AQUAMAN -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/aquaman-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/AquamanReview/aquaman-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Aquaman Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/aquaman-review-by-abhijith-a-g.html">Aquaman Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3.5" min="0" max="5">3.5 out of 5</meter> 3.5/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 30-12-2018</h5>	
-			<p>Genre: Superhero / Fantasy | Language: English | Year: 2018</p>
-			<p>ജെയിംസ് വാൻ സംവിധാനം ചെയ്ത അറ്റ്ലാന്റിസിന്റെ വിസ്മയകരമായ അണ്ടർവാട്ടർ ലോകം വരച്ചുകാട്ടുന്ന ചിത്രം.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/aquaman-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  		
-	
-		<!-- 19. CREED II -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/creed-II-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/CreedIIReview/creed-II-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Creed II Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/creed-II-review-by-abhijith-a-g.html">Creed II Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3.5" min="0" max="5">3.5 out of 5</meter> 3.5/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 30-11-2018</h5>	
-			<p>Genre: Sports / Drama | Language: English | Year: 2018</p>
-			<p>റോക്കി സിനിമ സീരീസിലെ എട്ടാമത്തെ ചിത്രവും Creed (2015)-ന്റെ ശക്തമായ തുടർച്ചയും.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/creed-II-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div>  	
-	
-		<!-- 20. FANTASTIC BEASTS 2 -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/fantastic-beasts-the-crimes-of-grindelwald-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/FantasticBeastsTheCrimesofGrindelwaldReview/fantastic-beasts-the-crimes-of-grindelwald-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Fantastic Beasts: The Crimes of Grindelwald Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/fantastic-beasts-the-crimes-of-grindelwald-review-by-abhijith-a-g.html">Fantastic Beasts: The Crimes of Grindelwald Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Above Average Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-this-one-is-above-average.png" alt="Above Average" style="width:40px;height:40px"></a><meter value="2.5" min="0" max="5">2.5 out of 5</meter> 2.5/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 17-11-2018</h5>
-			<p>Genre: Fantasy / Adventure | Language: English | Year: 2018</p>
-			<p>ഹാരി പോട്ടർ മാന്ത്രിക ലോകത്തിന്റെ പ്രീക്വലായ ഫന്റാസ്റ്റിക് ബീസ്റ്റ്സ് സീരിസിലെ രണ്ടാം ഭാഗം.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/fantastic-beasts-the-crimes-of-grindelwald-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div> 
-	
-		<!-- 21. JOHNNY ENGLISH STRIKES AGAIN -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/JithinJPrasad/johny-english-strikes-again-honest-review-by-jithin-j-prasad.html">
-				<img src="Profiles/CriticProfiles/JithinJPrasad/pics/JohnnyEnglishStrikesAgainReview/johny-english-strikes-again-review-by-jithin-j-prasad.jpg" class="img-responsive" alt="Johnny English Strikes Again Review by Jithin J Prasad"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/JithinJPrasad/johny-english-strikes-again-honest-review-by-jithin-j-prasad.html">Johnny English Strikes Again | Review by Jithin J Prasad</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3.25" min="0" max="5">3.25 out of 5</meter> 3.25/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 21-10-2018</h5>
-			<p>If you are bored and looking for some comedy to make your day, go for Johnny English: Strikes Again. Rowan Atkinson's timeless comedy delivers pure laughs.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/JithinJPrasad/johny-english-strikes-again-honest-review-by-jithin-j-prasad.html">Read Full Review</a>
-		</div> 
-		
-		<!-- 22. KAYAMKULAM KOCHUNNI -->
-		<div class="blog-top">
-			<a href="Profiles/CriticProfiles/AbhijithAG/kayamkulam-kochunni-review-by-abhijith-a-g.html">
-				<img src="Profiles/CriticProfiles/AbhijithAG/pics/KayamkulamKochunniReview/kayamkulam-kochunni-review-by-abhijith-a-g.jpg" class="img-responsive" alt="Kayamkulam Kochunni Review by Abhijith A G"/>
-			</a>
-			<h1><a href="Profiles/CriticProfiles/AbhijithAG/kayamkulam-kochunni-review-by-abhijith-a-g.html">Kayamkulam Kochunni Review by Abhijith A G</a></h1>
-			<a href="remarks.html" data-toggle="tooltip" data-placement="top" title="Safe to Watch Remark"><img src="pics/RatingSiteLogos/OakShowCertificates/oakshow-says-it-is-safe.png" alt="Safe to Watch" style="width:40px;height:40px"></a><meter value="3" min="0" max="5">3 out of 5</meter> 3/5<br>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/AbhijithAG/index.html">Abhijith A G</a> | Date : 12-10-2018</h5>
-			<p>Genre: Historical Drama / Action Thriller | Language: Malayalam | Year: 2018</p>
-			<p>Starring: Mohanlal, Nivin Pauly, Sunny Wayne, Babu Antony, Priya Anand.</p>
-			<p>മലയാളികളുടെ മനസ്സിൽ ഇന്നും നിലനിൽക്കുന്ന കായംകുളത്തെ റോബിൻ ഹുഡ് ആയ കൊച്ചുണ്ണിയുടെ വീരഗാഥ.</p>
-			<a class="hvr-sweep-to-right more" href="Profiles/CriticProfiles/AbhijithAG/kayamkulam-kochunni-review-by-abhijith-a-g.html">Read Full Review</a>
-		</div> 
-		 
-	</div>
-
-	<div class="col-md-3 blog-sidebar">
-		<script language="javascript" type="text/javascript" src="Profiles/CriticProfiles/popularsidebar.txt"></script>
-	</div>
-
-	<div class="clearfix"> </div>
-	<div class="blog-list2" style="margin-top: 30px;">
-		<h4>Tags</h4>
-		<ul>
-			<li><a href="index.html">OakShow</a></li>
-			<li><a href="Indian.html">Indian Cinema</a></li>
-			<li><a href="Hollywood.html">Hollywood</a></li>
-			<li><a href="Series.html">Series</a></li>
-			<li><a href="Games.html">Games</a></li>
-			<li><a href="Sports.html">Sports</a></li>
-		</ul>
-	</div>
-
-	<div class="clearfix"> </div>
-	<nav>
-		<ul class="pagination">
-			<li class="disabled"><a href="OakShowReviews.html" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-			<li class="active"><a href="OakShowReviews.html">Fresh <span class="sr-only">(current)</span></a></li>
-			<li><a href="OakShowReviews2020.html">2020</a></li>
-			<li><a href="OakShowReviews2019.html">2019</a></li>
-			<li><a href="OakShowReviews2018.html">2018</a></li>
-			<li><a href="OakShowReviews2018.html" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-		</ul>
-	</nav>
-</div>
-</div>
-<!--//blog-->
-
-<!--footer-->
-<script language="javascript" type="text/javascript" src="footer.txt"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-77818206-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<!--//footer-->
+</noscript>
 </body>
 </html>

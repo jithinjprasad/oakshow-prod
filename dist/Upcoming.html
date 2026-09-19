@@ -1,527 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="light" style="color-scheme: light;">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K686R3P');</script>
-<!-- End Google Tag Manager -->
-<link rel="icon" type="image/png" href="favicon.png">
-<title>Upcoming Movies, Series and Events | OakShow</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
-<!-- Custom Theme files -->
-<!--menu-->
-<script src="js/scripts.js"></script>
-<link href="css/styles.css" rel="stylesheet">
-<!--//menu-->
-<!--theme-style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
-<!--//theme-style-->
-<!--navBar-->
-<script src="js/navBar.js"></script>
-<link href="css/navBar.css" rel="stylesheet">
-<!--//navBar-->
-<!--effects-->
-<script src="js/effects3.js"></script>
-<!--//effects-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="movies releasing soon 2026, upcoming movies, Ramayana Part 1, Digger, Kala, Godzilla vs Kong, Sooryavanshi, movies releasing upcoming week, hollywood movies releasing soon, movies releasing soon in theaters" />
-<meta name="author" content="OakShow" />
-<meta property="article:tag" content="Movies Releasing Soon" />
-<meta name="rating" content="general" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Upcoming Movies, Series and Events | OakShow" />
-<meta property="og:description" content="Discover anticipated theatrical releases, upcoming blockbusters, exclusive trailers, and advance ticket booking alerts for Ramayana: Part 1, Digger, and more on OakShow." />
-<meta property="og:image" content="http://oakshow.in/pics/Films/RamayanaPart1/2.jpg" />
-<meta property="og:site_name" content="OakShow" />
-<meta property="fb:page_id" content="129192287245139"/>
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@oak_show">
-<meta name="twitter:creator" content="@jithinjprasad">
-<meta name="twitter:title" content="Upcoming Movies, Series and Events | OakShow"/>
-<meta name="twitter:description" content="Upcoming Movies, Series and Events releasing soon in Indian and Hollywood cinema."/>
-<meta name="twitter:image" content="http://oakshow.in/pics/Films/RamayanaPart1/2.jpg"/>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" id="theme-color-meta" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=oakshow3" />
+  <link rel="icon" type="image/png" sizes="300x300" href="/favicon.png?v=oakshow3" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=oakshow3" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=oakshow3" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=oakshow3" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=oakshow3" />
+  <script>
+    (function() {
+      try {
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth && window.innerWidth <= 768);
+        var savedTheme = localStorage.getItem('oakshow_theme_v3') || localStorage.getItem('oakshow_theme_v2') || localStorage.getItem('oakshow_theme');
+        if (!localStorage.getItem('oakshow_theme_v3')) {
+          savedTheme = isMobile ? 'dark' : 'light';
+          localStorage.setItem('oakshow_theme_v3', savedTheme);
+        }
+        var t = (savedTheme === 'dark') ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
 
-<style>
-/* Responsive & Desktop/Mobile Optimization for Upcoming */
-.upcoming-page-header {
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.upcoming-page-header h3 {
-  font-size: 26px;
-  font-weight: 700;
-  color: #ffb800;
-  margin-top: 0;
-}
-.upcoming-page-header p {
-  color: #9ca3af;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-.box-col {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 28px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.box-col:hover {
-  border-color: rgba(255, 184, 0, 0.3);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-}
-.box-col.featured-upcoming {
-  border: 1px solid rgba(255, 184, 0, 0.4);
-  background: linear-gradient(135deg, rgba(255, 184, 0, 0.06), rgba(0, 0, 0, 0.3));
-}
-.featured-badge {
-  display: inline-block;
-  background: #ffb800;
-  color: #000;
-  font-size: 11px;
-  font-weight: 800;
-  padding: 3px 10px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
-}
-.box-col .left-side {
-  padding: 0;
-  text-align: center;
-}
-.box-col .left-side img {
-  width: 100%;
-  max-width: 280px;
-  height: 380px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
-  margin: 0 auto;
-}
-.box-col:hover .left-side img {
-  transform: scale(1.02);
-}
-.box-col .middle-side {
-  padding: 10px 24px;
-}
-.box-col .middle-side h1 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 12px;
-  line-height: 1.3;
-}
-.box-col .middle-side h1 a {
-  color: #fff;
-  text-decoration: none;
-}
-.box-col .middle-side h1 a:hover {
-  color: #ffb800;
-}
-.box-col .middle-side p {
-  margin-bottom: 8px;
-  font-size: 14.5px;
-  color: #e5e7eb;
-}
-.box-col .middle-side p span.bath {
-  color: #9ca3af;
-  font-weight: 600;
-}
-.box-col .middle-side p span.bath span {
-  color: #fff;
-  font-weight: normal;
-}
-.action-buttons-group {
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.action-buttons-group a.hvr-sweep-to-right.more {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 20px;
-  font-size: 13.5px;
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: all 0.2s ease;
-}
-.action-buttons-group a.hvr-sweep-to-right.more:hover {
-  background: #ffb800;
-  color: #000;
-  border-color: #ffb800;
-}
-.action-buttons-group a.btn-book-now {
-  background: #e50914 !important;
-  border-color: #e50914 !important;
-  color: #fff !important;
-}
-.action-buttons-group a.btn-book-now:hover {
-  background: #b80710 !important;
-  border-color: #b80710 !important;
-}
-@media (max-width: 768px) {
-  .box-col {
-    flex-direction: column;
-    text-align: center;
-    padding: 16px 12px;
+        // Immediately sync mobile browser theme-color status bar before initial paint
+        var themeColor = (t === 'dark') ? '#030813' : '#ffffff';
+        var metaTheme = document.getElementById('theme-color-meta') || document.querySelector('meta[name="theme-color"]');
+        if (metaTheme) {
+          metaTheme.setAttribute('content', themeColor);
+        }
+
+        // Synchronously derive and set initial document.title before Analytics loads
+        var path = window.location.pathname || '';
+        var rawSlug = path.replace(/^\/+|\.html$/gi, '').replace(/^(movies|series|films)\//i, '');
+        if (rawSlug && rawSlug !== 'index' && rawSlug !== 'home' && rawSlug !== 'discover') {
+          var readable = rawSlug.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[-_]/g, ' ');
+          document.title = readable + ' All Ratings, Reviews and Watch Online — OakShow';
+        }
+      } catch(e) {}
+    })();
+  </script>
+  <style>
+    noscript {
+      display: none !important;
+    }
+    /* Hide Firebase Auth background iframe and prevent it from rendering a white bar or top scroll offset on mobile dark theme */
+    iframe[src*="firebaseapp.com"],
+    iframe[src*="/__/auth/"],
+    iframe[id^="I0_"],
+    iframe[name^="I0"],
+    iframe[ng-non-bindable] {
+      position: fixed !important;
+      top: -9999px !important;
+      left: -9999px !important;
+      width: 0 !important;
+      height: 0 !important;
+      border: 0 !important;
+      outline: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      clip-path: inset(50%) !important;
+      background: transparent !important;
+      color-scheme: dark !important;
+      z-index: -99999 !important;
+    }
+  </style>
+  
+  <title>Upcoming Movies &amp; Premiere Countdown — OakShow</title>
+  <meta name="description" content="Discover anticipated theatrical releases, upcoming blockbusters, exclusive trailers, and advance ticket booking alerts." />
+  <meta name="keywords" content="OakShow, movie reviews, ratings, cinema, Hollywood, Bollywood, Tollywood, Mollywood, Kollywood, upcoming movies, release calendar, critic reviews, showtimes, BookMyShow" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://oakshow.in/Upcoming.html" />
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:site_name" content="OakShow" />
+  <meta property="og:title" content="Upcoming Movies &amp; Premiere Countdown — OakShow" />
+  <meta property="og:description" content="Discover anticipated theatrical releases, upcoming blockbusters, exclusive trailers, and advance ticket booking alerts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://oakshow.in/Upcoming.html" />
+  <meta property="og:image" content="https://oakshow.in/favicon.png" />
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@OakShow" />
+  <meta name="twitter:creator" content="@OakShow" />
+  <meta name="twitter:title" content="Upcoming Movies &amp; Premiere Countdown — OakShow" />
+  <meta name="twitter:description" content="Discover anticipated theatrical releases, upcoming blockbusters, exclusive trailers, and advance ticket booking alerts." />
+  <meta name="twitter:image" content="https://oakshow.in/favicon.png" />
+
+  <!-- Schema.org JSON-LD Organization Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "OakShow",
+    "url": "https://oakshow.in",
+    "logo": "https://oakshow.in/favicon.png",
+    "sameAs": [
+      "https://www.instagram.com/oak_show/",
+      "https://www.facebook.com/OakShowReal/",
+      "https://x.com/oak_show?lang=uk",
+      "https://www.youtube.com/@OakShow",
+      "https://www.linkedin.com/company/oakshow"
+    ]
   }
-  .box-col .left-side img {
-    max-width: 240px;
-    height: 330px;
-    margin-bottom: 15px;
-  }
-  .box-col .middle-side {
-    padding: 0;
-    width: 100%;
-  }
-  .box-col .middle-side h1 {
-    font-size: 20px;
-  }
-  .action-buttons-group {
-    justify-content: center;
-  }
-  .upcoming-page-header h3 {
-    font-size: 22px;
-  }
-}
-</style>
+  </script>
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K686R3P');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77818206-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-77818206-1', {
+      send_page_view: false
+    });
+  </script>
+  <!-- Legacy Google Analytics ga() support -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-77818206-1', 'auto');
+  </script>
+  <script type="module" crossorigin src="/assets/index-DAHWZmpK.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DrFqUK7t.css">
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K686R3P"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="root"></div>
+<noscript>
+<div class="oakshow-crawler-fallback" style="padding:24px;font-family:sans-serif;color:#fff;background:#0d1117;">
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K686R3P"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<!--header-->	
-	<script language="javascript" type="text/javascript" src="header.txt"></script>	
-	<!---pop-up-box---->
-	<script>
-		$(document).ready(function() {
-			$('.popup-with-zoom-anim').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in'
-			});
-		});
-	</script>
-	</div>
-	<div class="clearfix"> </div>
-	</div>	
+      <h1>Upcoming Movies &amp; Premiere Countdown — OakShow</h1>
+      <p>Discover anticipated theatrical releases, upcoming blockbusters, exclusive trailers, and advance ticket booking alerts.</p>
+      <p><a href="https://oakshow.in/">Explore OakShow Homepage</a></p>
+    
 </div>
-<!--//header-->
-
-<div class="container" style="margin-top: 20px;">
-	<div class="buy-single">
-		<div class="upcoming-page-header">
-			<h3>Upcoming Movies, Series &amp; Events</h3>
-			<p>Explore upcoming theatrical releases, premiere countdowns, official trailers, and advance ticket booking options.</p>
-		</div>
-
-		<div class="box-sin">			
-			<div class="col-md-9 single-box">	
-							
-				<!-- 1. RAMAYANA: PART 1 (UPCOMING TILL RELEASE: November 06, 2026) -->
-				<div class="box-col featured-upcoming">
-					<div class="col-sm-6 left-side">
-						<a href="RamayanaPart1.html">
-							<img class="img-responsive" src="pics/Films/RamayanaPart1/1.jpg" alt="Ramayana: Part 1 Official Poster" onerror="this.src='pics/Films/RamayanaPart1/2.jpg'">
-						</a>
-					</div>				
-					<div class="col-sm-6 middle-side">
-						<span class="featured-badge">Diwali 2026 Mega Premiere</span>
-						<div itemscope itemtype="http://schema.org/Movie">
-							<h1 itemprop="name"><a href="RamayanaPart1.html">Ramayana: Part 1</a></h1>
-							<p><span class="bath">Language: <span itemprop="language">Hindi (Pan-India &amp; Global)</span></span></p>
-							<p><span class="bath">Release Date: <span itemprop="release">November 06, 2026 (Diwali)</span></span></p>
-							<p><span class="bath">Genre: <span itemprop="genre">Epic, Mythological, Action, Fantasy</span></span></p>
-							<p><span class="bath">Duration: <span itemprop="duration">TBA</span></span></p>
-							<p><span class="bath">Director: <span>Nitesh Tiwari</span></span></p>
-							<p><span class="bath">Starring: <span>Ranbir Kapoor, Sai Pallavi, Yash, Sunny Deol</span></span></p>
-						</div>
-						<div class="action-buttons-group">
-							<a target="_blank" href="https://www.youtube.com/watch?v=74nF-FWAS6M" class="hvr-sweep-to-right more" rel="nofollow">Trailer</a>
-							<a href="RamayanaPart1.html" class="hvr-sweep-to-right more">More Details</a>
-							<a target="_blank" href="https://in.bookmyshow.com/movies/calicut/ramayana/ET00451914" class="hvr-sweep-to-right more btn-book-now" rel="nofollow">Book Now</a>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>	
-
-				<!-- 2. DIGGER (UPCOMING TILL RELEASE: October 02, 2026) -->
-				<div class="box-col featured-upcoming">
-					<div class="col-sm-6 left-side">
-						<a href="Digger.html">
-							<img class="img-responsive" src="pics/Films/Digger/1.jpg" alt="Digger Official Theatrical Poster" onerror="this.src='pics/Films/Digger/2.jpg'">
-						</a>
-					</div>				
-					<div class="col-sm-6 middle-side">
-						<span class="featured-badge">Upcoming Hollywood Event</span>
-						<div itemscope itemtype="http://schema.org/Movie">
-							<h1 itemprop="name"><a href="Digger.html">Digger</a></h1>
-							<p><span class="bath">Language: <span itemprop="language">English</span></span></p>
-							<p><span class="bath">Release Date: <span itemprop="release">October 02, 2026</span></span></p>
-							<p><span class="bath">Genre: <span itemprop="genre">Black Comedy, Drama, Disaster, Satire</span></span></p>
-							<p><span class="bath">Duration: <span itemprop="duration">2hr 18mins</span></span></p>
-							<p><span class="bath">Director: <span>Alejandro G. Iñárritu</span></span></p>
-							<p><span class="bath">Starring: <span>Tom Cruise, Riz Ahmed, John Goodman, Sandra Hüller</span></span></p>
-						</div>
-						<div class="action-buttons-group">
-							<a target="_blank" href="https://www.youtube.com/watch?v=qORTe1wW3Wg" class="hvr-sweep-to-right more" rel="nofollow">Trailer</a>
-							<a href="Digger.html" class="hvr-sweep-to-right more">More Details</a>
-							<a target="_blank" href="https://in.bookmyshow.com/movies/calicut/digger/ET00477243" class="hvr-sweep-to-right more btn-book-now" rel="nofollow">Book Now</a>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-
-				<!-- 3. KALA -->
-				<div class="box-col">
-					<div class="col-sm-6 left-side">
-						<a href="Kala.html">
-							<img class="img-responsive" src="pics/Films/Kala/1.jpg" alt="Kala Poster">
-						</a>
-					</div>				
-					<div class="col-sm-6 middle-side">
-						<div itemscope itemtype="http://schema.org/Movie">
-							<h1 itemprop="name"><a href="Kala.html">Kala</a></h1>
-							<p><span class="bath">Language: <span itemprop="language">Malayalam</span></span></p>
-							<p><span class="bath">Release Date: <span itemprop="release">March 25, 2021</span></span></p>
-							<p><span class="bath">Genre: <span itemprop="genre">Thriller</span></span></p>
-							<p><span class="bath">Duration: <span itemprop="duration">N/A</span></span></p>
-						</div>
-						<div class="action-buttons-group">
-							<a target="_blank" href="https://www.youtube.com/watch?v=9b9MovPPewk" class="hvr-sweep-to-right more" rel="nofollow">Trailer</a>
-							<a href="Kala.html" class="hvr-sweep-to-right more">More</a>
-							<a href="Kala.html" class="hvr-sweep-to-right more btn-book-now">Book Now</a>       
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>	
-							
-				<!-- 4. GODZILLA VS. KONG -->
-				<div class="box-col">
-					<div class="col-sm-6 left-side">
-						<a href="GodzillavsKong.html">
-							<img class="img-responsive" src="pics/Films/GodzillavsKong/1.jpg" alt="Godzilla vs. Kong Poster">
-						</a>
-					</div>				
-					<div class="col-sm-6 middle-side">
-						<div itemscope itemtype="http://schema.org/Movie">
-							<h1 itemprop="name"><a href="GodzillavsKong.html">Godzilla vs. Kong</a></h1>
-							<p><span class="bath">Language: <span itemprop="language">English</span></span></p>
-							<p><span class="bath">Release Date: <span itemprop="release">March 24, 2021</span></span></p>
-							<p><span class="bath">Genre: <span itemprop="genre">Action, Sci-Fi, Monster</span></span></p>
-							<p><span class="bath">Duration: <span itemprop="duration">1hr 53mins</span></span></p>
-						</div>
-						<div class="action-buttons-group">
-							<a target="_blank" href="https://youtu.be/odM92ap8_c0" class="hvr-sweep-to-right more" rel="nofollow">Trailer</a>
-							<a href="GodzillavsKong.html" class="hvr-sweep-to-right more">More</a>
-							<a href="GodzillavsKong.html" class="hvr-sweep-to-right more btn-book-now">Book Now</a>       
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-							
-				<!-- 5. SOORYAVANSHI -->
-				<div class="box-col">
-					<div class="col-sm-6 left-side">
-						<a href="Sooryavanshi.html">
-							<img class="img-responsive" src="pics/Films/Sooryavanshi/1.jpg" alt="Sooryavanshi Poster">
-						</a>
-					</div>				
-					<div class="col-sm-6 middle-side">
-						<div itemscope itemtype="http://schema.org/Movie">
-							<h1 itemprop="name"><a href="Sooryavanshi.html">Sooryavanshi</a></h1>
-							<p><span class="bath">Language: <span itemprop="language">Hindi</span></span></p>
-							<p><span class="bath">Release Date: <span itemprop="release">2021</span></span></p>
-							<p><span class="bath">Genre: <span itemprop="genre">Action, Comedy</span></span></p>
-							<p><span class="bath">Duration: <span itemprop="duration">N/A</span></span></p>
-						</div>	
-						<div class="action-buttons-group">
-							<a target="_blank" href="https://www.youtube.com/watch?v=u5r77-OQwa8" class="hvr-sweep-to-right more" rel="nofollow">Trailer</a>
-							<a href="Sooryavanshi.html" class="hvr-sweep-to-right more">More</a>
-							<a href="Sooryavanshi.html" class="hvr-sweep-to-right more btn-book-now">Book Now</a>       
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>			
-			
-				<!-- 6. OVERDRAFT -->
-				<div class="box-col">
-					<div class="col-sm-6 left-side">
-						<a href="OverdraftSavingtheIndianSaver.html">
-							<img class="img-responsive" src="pics/Books/OverdraftSavingtheIndianSaver/1.jpg" alt="Overdraft: Saving the Indian Saver Poster">
-						</a>
-					</div>				
-					<div class="col-sm-6 middle-side">
-						<div itemscope itemtype="http://schema.org/Book">
-							<h1 itemprop="name"><a href="OverdraftSavingtheIndianSaver.html">Overdraft: Saving the Indian Saver</a></h1>
-							<p><span class="bath">Language: <span itemprop="language">English</span></span></p>
-							<p><span class="bath">Release Date: <span itemprop="release">2020</span></span></p>
-							<p><span class="bath">Genre: <span itemprop="genre">Finance, Non-Fiction</span></span></p>
-						</div>
-						<div class="action-buttons-group">
-							<a href="OverdraftSavingtheIndianSaver.html" class="hvr-sweep-to-right more">More</a>
-							<a href="OverdraftSavingtheIndianSaver.html" class="hvr-sweep-to-right more btn-book-now">Order Now</a>       
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>							
-						
-				<!-- 7. BUTTERFLY -->
-				<div class="box-col">
-					<div class="col-sm-6 left-side">
-						<a href="Butterfly.html">
-							<img class="img-responsive" src="pics/Films/Butterfly/Butterfly-Reviews-and-Ratings.jpg" alt="Butterfly Poster">
-						</a>
-					</div>				
-					<div class="col-sm-6 middle-side">
-						<h1><a href="Butterfly.html">Butterfly (2019 film)</a></h1>
-						<p><span class="bath">Language: <span>Kannada</span></span></p>
-						<p><span class="bath">Release Date: <span>2020</span></span></p>
-						<p><span class="bath">Genre: <span>Comedy, Drama</span></span></p>
-						<div class="action-buttons-group">
-							<a target="_blank" href="https://www.youtube.com/watch?v=DOQ7zXniTWc" class="hvr-sweep-to-right more" rel="nofollow">Trailer</a>
-							<a href="Butterfly.html" class="hvr-sweep-to-right more">More</a>
-							<a href="Butterfly.html" class="hvr-sweep-to-right more btn-book-now">Book Now</a>       
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>	
-					 
-				<!-- 8. THAT IS MAHALAKSHMI -->
-				<div class="box-col">
-					<div class="col-sm-6 left-side">
-						<a href="ThatIsMahalakshmi.html">
-							<img class="img-responsive" src="pics/Films/ThatIsMahalakshmi/That-Is-Mahalakshmi-Reviews-and-Ratings.jpg" alt="That Is Mahalakshmi Poster">
-						</a>
-					</div>				
-					<div class="col-sm-6 middle-side">
-						<h1><a href="ThatIsMahalakshmi.html">That Is Mahalakshmi</a></h1>
-						<p><span class="bath">Language: <span>Telugu</span></span></p>
-						<p><span class="bath">Release Date: <span>2020</span></span></p>
-						<p><span class="bath">Genre: <span>Comedy, Drama</span></span></p>
-						<div class="action-buttons-group">
-							<a target="_blank" href="https://www.youtube.com/watch?v=2w3LSY9EALY" class="hvr-sweep-to-right more" rel="nofollow">Trailer</a>
-							<a href="ThatIsMahalakshmi.html" class="hvr-sweep-to-right more">More</a>
-							<a href="ThatIsMahalakshmi.html" class="hvr-sweep-to-right more btn-book-now">Book Now</a>       
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-					 
-				<!-- 9. PARIS PARIS -->
-				<div class="box-col">
-					<div class="col-sm-6 left-side">
-						<a href="ParisParis.html">
-							<img class="img-responsive" src="pics/Films/ParisParis/Paris-Paris-Reviews-and-Ratings.jpg" alt="Paris Paris Poster">
-						</a>
-					</div>				
-					<div class="col-sm-6 middle-side">
-						<h1><a href="ParisParis.html">Paris Paris</a></h1>
-						<p><span class="bath">Language: <span>Tamil</span></span></p>
-						<p><span class="bath">Release Date: <span>2020</span></span></p>
-						<p><span class="bath">Genre: <span>Comedy, Drama</span></span></p>
-						<div class="action-buttons-group">
-							<a target="_blank" href="https://www.youtube.com/watch?v=-LSzzQ0ZLiU" class="hvr-sweep-to-right more" rel="nofollow">Trailer</a>
-							<a href="ParisParis.html" class="hvr-sweep-to-right more">More</a>
-							<a href="ParisParis.html" class="hvr-sweep-to-right more btn-book-now">Book Now</a>       
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>	
-					 
-				<!-- 10. ZAM ZAM -->
-				<div class="box-col">
-					<div class="col-sm-6 left-side">
-						<a href="ZamZam.html">
-							<img class="img-responsive" src="pics/Films/ZamZam/Zam-Zam-Reviews-and-Ratings.jpg" alt="Zam Zam Poster">
-						</a>
-					</div>				
-					<div class="col-sm-6 middle-side">
-						<h1><a href="ZamZam.html">Zam Zam</a></h1>
-						<p><span class="bath">Language: <span>Malayalam</span></span></p>
-						<p><span class="bath">Release Date: <span>2020</span></span></p>
-						<p><span class="bath">Genre: <span>Comedy, Drama</span></span></p>
-						<div class="action-buttons-group">
-							<a target="_blank" href="https://www.youtube.com/watch?v=2w3LSY9EALY" class="hvr-sweep-to-right more" rel="nofollow">Trailer</a>
-							<a href="ZamZam.html" class="hvr-sweep-to-right more">More</a>
-							<a href="ZamZam.html" class="hvr-sweep-to-right more btn-book-now">Book Now</a>       
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>	
-				
-				<div class="right-side" style="margin-top: 15px;">
-					<a target="_blank" href="#" class="hvr-sweep-to-right more">Switch To Mobile View</a>     
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="single-box-right">
-					<h4>Upcoming Highlights</h4>
-					<div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 15px; margin-bottom: 20px;">
-						<p style="color:#ffb800; font-weight:700; margin-bottom:4px;">🔥 Ramayana: Part 1</p>
-						<p style="font-size:12.5px; color:#d1d5db; margin-bottom:12px;">Diwali 2026 worldwide tentpole starring Ranbir Kapoor, Sai Pallavi &amp; Yash.</p>
-						
-						<p style="color:#ffb800; font-weight:700; margin-bottom:4px;">🎬 Digger</p>
-						<p style="font-size:12.5px; color:#d1d5db; margin-bottom:12px;">October 02, 2026 satirical disaster comedy starring Tom Cruise &amp; Riz Ahmed.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="clearfix"> </div>
-		<div class="nav-page">
-			<nav>
-				<ul class="pagination">
-					<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-					<li><a href="Upcoming2.html">2</a></li>
-					<li><a href="Upcoming3.html">3</a></li>
-					<li><a href="Upcoming3.html" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-</div>
-
-<!--footer-->
-<script language="javascript" type="text/javascript" src="footer.txt"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-77818206-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<!--//footer-->
+</noscript>
 </body>
 </html>

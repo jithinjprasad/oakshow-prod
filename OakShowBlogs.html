@@ -1,288 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="light" style="color-scheme: light;">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K686R3P');</script>
-<!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" id="theme-color-meta" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=oakshow3" />
+  <link rel="icon" type="image/png" sizes="300x300" href="/favicon.png?v=oakshow3" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=oakshow3" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=oakshow3" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=oakshow3" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=oakshow3" />
+  <script>
+    (function() {
+      try {
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth && window.innerWidth <= 768);
+        var savedTheme = localStorage.getItem('oakshow_theme_v3') || localStorage.getItem('oakshow_theme_v2') || localStorage.getItem('oakshow_theme');
+        if (!localStorage.getItem('oakshow_theme_v3')) {
+          savedTheme = isMobile ? 'dark' : 'light';
+          localStorage.setItem('oakshow_theme_v3', savedTheme);
+        }
+        var t = (savedTheme === 'dark') ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
 
-<link rel="icon" type="image/png" href="favicon.png">
-<title>OakShow Blogs — Cinema Perspectives &amp; Editorial Essays</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
-<!-- Custom Theme files -->
-<!--menu-->
-<script src="js/scripts.js"></script>
-<link href="css/styles.css" rel="stylesheet">
-<!--//menu-->
-<!--YoutubeVideos-->
-<script src="js/youtube.js"></script>
-<link href="css/youtube.css" rel="stylesheet">
-<!--//YoutubeVideos-->
-<!--theme-style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
-<!--//theme-style-->
-<!--navBar-->
-<script src="js/navBar.js"></script>
-<link href="css/navBar.css" rel="stylesheet">
-<!--//navBar-->
-<!--effects-->
-<script src="js/effects3.js"></script>
-<!--//effects-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="Read in-depth cinema features, movie recommendations, director retrospectives, and cultural commentary on OakShow Blogs.">
-<meta name="keywords" content="OakShow Blogs, Movie essays, cinema retrospectives, feel good films, Jithin J Prasad blogs" />
-<meta name="author" content="OakShow" />
-<meta property="article:tag" content="OakShow Cinema Perspectives and Editorial Blogs" />
-<meta name="rating" content="general" />
-<meta property="og:type" content="article" />
-<meta property="og:site_name" content="OakShow" />
-<meta property="og:title" content="OakShow Blogs — Cinema Perspectives &amp; Editorial Essays" />
-<meta property="og:description" content="In-depth cinema features, director retrospectives, movie recommendations, and reflections on entertainment culture." />
-<meta property="og:image" content="http://oakshow.in/blog/pics/30-feel-good-films-to-watch-during-lockdown.jpg" />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:site" content="@oak_show"/>
-<meta name="twitter:creator" content="@oak_show"/>
-<meta name="twitter:title" content="OakShow Blogs — Cinema Perspectives &amp; Editorial Essays"/>
-<meta name="twitter:description" content="In-depth cinema features, director retrospectives, and movie recommendations."/>
-<meta name="twitter:image" content="http://oakshow.in/blog/pics/30-feel-good-films-to-watch-during-lockdown.jpg"/>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        // Immediately sync mobile browser theme-color status bar before initial paint
+        var themeColor = (t === 'dark') ? '#030813' : '#ffffff';
+        var metaTheme = document.getElementById('theme-color-meta') || document.querySelector('meta[name="theme-color"]');
+        if (metaTheme) {
+          metaTheme.setAttribute('content', themeColor);
+        }
 
+        // Synchronously derive and set initial document.title before Analytics loads
+        var path = window.location.pathname || '';
+        var rawSlug = path.replace(/^\/+|\.html$/gi, '').replace(/^(movies|series|films)\//i, '');
+        if (rawSlug && rawSlug !== 'index' && rawSlug !== 'home' && rawSlug !== 'discover') {
+          var readable = rawSlug.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[-_]/g, ' ');
+          document.title = readable + ' All Ratings, Reviews and Watch Online — OakShow';
+        }
+      } catch(e) {}
+    })();
+  </script>
+  <style>
+    noscript {
+      display: none !important;
+    }
+    /* Hide Firebase Auth background iframe and prevent it from rendering a white bar or top scroll offset on mobile dark theme */
+    iframe[src*="firebaseapp.com"],
+    iframe[src*="/__/auth/"],
+    iframe[id^="I0_"],
+    iframe[name^="I0"],
+    iframe[ng-non-bindable] {
+      position: fixed !important;
+      top: -9999px !important;
+      left: -9999px !important;
+      width: 0 !important;
+      height: 0 !important;
+      border: 0 !important;
+      outline: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      clip-path: inset(50%) !important;
+      background: transparent !important;
+      color-scheme: dark !important;
+      z-index: -99999 !important;
+    }
+  </style>
+  
+  <title>OakShow Cinema Perspectives &amp; Editorial Essays</title>
+  <meta name="description" content="In-depth cinema features, retrospectives, and cultural commentary." />
+  <meta name="keywords" content="OakShow, movie reviews, ratings, cinema, Hollywood, Bollywood, Tollywood, Mollywood, Kollywood, upcoming movies, release calendar, critic reviews, showtimes, BookMyShow" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://oakshow.in/OakShowBlogs.html" />
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:site_name" content="OakShow" />
+  <meta property="og:title" content="OakShow Cinema Perspectives &amp; Editorial Essays" />
+  <meta property="og:description" content="In-depth cinema features, retrospectives, and cultural commentary." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://oakshow.in/OakShowBlogs.html" />
+  <meta property="og:image" content="https://oakshow.in/favicon.png" />
 
-<style>
-/* Modern Responsive & Desktop/Mobile Optimization for OakShow Blogs */
-:root {
-  --gold: #ffb800;
-  --gold-hover: #e6a600;
-  --bg-dark: #030813;
-  --card-bg: rgba(15, 23, 42, 0.75);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --text-main: #f1f5f9;
-  --text-muted: #94a3b8;
-}
-html, body {
-  background-color: var(--bg-dark);
-  color: var(--text-main);
-  max-width: 100%;
-  overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-.blog {
-  padding: 20px 0 60px;
-}
-.blog-top {
-  margin-bottom: 28px;
-  padding: 28px;
-  background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--card-border);
-  border-radius: 14px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.blog-top:hover {
-  border-color: rgba(255, 184, 0, 0.35);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
-  transform: translateY(-2px);
-}
-.blog-top img.img-responsive {
-  width: 100%;
-  max-height: 480px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 18px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-}
-.blog-top h1 {
-  font-size: 24px;
-  line-height: 1.35;
-  margin: 12px 0 10px 0;
-  font-weight: 700;
-}
-.blog-top h1 a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-.blog-top h1 a:hover {
-  color: var(--gold);
-}
-.blog-top h5 {
-  color: var(--text-muted);
-  margin-bottom: 14px;
-  font-size: 13.5px;
-}
-.blog-top h5 a {
-  color: var(--gold);
-  font-weight: 600;
-  text-decoration: none;
-}
-.blog-top p {
-  line-height: 1.7;
-  font-size: 15px;
-  color: #cbd5e1;
-  margin-bottom: 14px;
-}
-.blog-top a.more {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 12px;
-  padding: 9px 24px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 13.5px;
-  text-decoration: none;
-  background: var(--gold);
-  color: #000000 !important;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(255, 184, 0, 0.3);
-}
-.blog-top a.more:hover {
-  background: var(--gold-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(255, 184, 0, 0.45);
-}
-.blog-sidebar {
-  background: rgba(15, 23, 42, 0.5);
-  border: 1px solid var(--card-border);
-  border-radius: 12px;
-  padding: 20px;
-}
-@media (max-width: 768px) {
-  .blog {
-    padding: 10px 0 40px;
-  }
-  .blog-top {
-    padding: 16px 14px;
-    margin-bottom: 22px;
-  }
-  .blog-top img.img-responsive {
-    max-height: 240px;
-  }
-  .blog-top h1 {
-    font-size: 20px;
-    line-height: 1.35;
-  }
-  .blog-top p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  .blog-top a.more {
-    width: 100%;
-    justify-content: center;
-    padding: 11px 16px;
-  }
-  .blog-sidebar {
-    margin-top: 24px;
-    padding: 16px;
-  }
-}
-</style>
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@OakShow" />
+  <meta name="twitter:creator" content="@OakShow" />
+  <meta name="twitter:title" content="OakShow Cinema Perspectives &amp; Editorial Essays" />
+  <meta name="twitter:description" content="In-depth cinema features, retrospectives, and cultural commentary." />
+  <meta name="twitter:image" content="https://oakshow.in/favicon.png" />
 
+  <!-- Schema.org JSON-LD Organization Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "OakShow",
+    "url": "https://oakshow.in",
+    "logo": "https://oakshow.in/favicon.png",
+    "sameAs": [
+      "https://www.instagram.com/oak_show/",
+      "https://www.facebook.com/OakShowReal/",
+      "https://x.com/oak_show?lang=uk",
+      "https://www.youtube.com/@OakShow",
+      "https://www.linkedin.com/company/oakshow"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K686R3P');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77818206-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-77818206-1', {
+      send_page_view: false
+    });
+  </script>
+  <!-- Legacy Google Analytics ga() support -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-77818206-1', 'auto');
+  </script>
+  <script type="module" crossorigin src="/assets/index-DAHWZmpK.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DrFqUK7t.css">
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K686R3P"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="root"></div>
+<noscript>
+<div class="oakshow-crawler-fallback" style="padding:24px;font-family:sans-serif;color:#fff;background:#0d1117;">
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K686R3P"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<!--header-->	
-	<script language="javascript" type="text/javascript" src="header.txt"></script>	
-	<!---pop-up-box---->
-	<script>
-		$(document).ready(function() {
-			$('.popup-with-zoom-anim').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in'
-			});
-		});
-	</script>
-	</div>
-	<div class="clearfix"> </div>
-	</div>	
+      <h1>OakShow Cinema Perspectives &amp; Editorial Essays</h1>
+      <p>In-depth cinema features, retrospectives, and cultural commentary.</p>
+      <p><a href="https://oakshow.in/">Explore OakShow Homepage</a></p>
+    
 </div>
-<!--//header-->
-
-<!--blog-->
-<div class="blog">
-<div class="container">
-
-	<div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1);">
-		<h3 style="color:#ffb800; font-size:26px; font-weight:700; margin-top:0;">OakShow Editorial Blogs</h3>
-		<p style="color:#9ca3af; font-size:14px; margin-bottom:0;">Special perspectives, curated watchlists, and in-depth essays by OakShow film critics.</p>
-	</div>
-
-	<div class="col-md-9 blog-head">	
-		<!-- ARTICLE 1 -->
-		<div class="blog-top">
-			<h1>
-				<a href="30-feel-good-films-to-watch-during-lockdown.html">Some of The Feel Good Movies that You Should Watch Right Now</a>
-			</h1>
-			<a href="30-feel-good-films-to-watch-during-lockdown.html">
-				<img src="blog/pics/30-feel-good-films-to-watch-during-lockdown.jpg" class="img-responsive" alt="30 Feel Good Movies to Watch During Corona Lockdown by Jithin J Prasad"/>
-			</a>
-			<h5>Posted By : <a href="Profiles/CriticProfiles/JithinJPrasad/index.html">Jithin J Prasad</a> | Date : 31-03-2020</h5>
-			<p>I know it's messed up right now across the globe, and you might be thinking about various ways to make yourself feel better, right? Well I got some good news, and that's I am going to give away the list of almost every feel-good film in almost every language that could literally boost up your mood. These are curated films that will leave you smiling and comforted. Check out the complete recommendations with streaming options.</p>
-			<a class="hvr-sweep-to-right more" href="30-feel-good-films-to-watch-during-lockdown.html">Read Full Article</a>
-		</div>  		
-	</div>
-
-	<div class="col-md-3 blog-sidebar">
-		<script language="javascript" type="text/javascript" src="blog/sidebar.txt"></script>
-	</div>
-
-	<div class="clearfix"> </div>
-	<div class="blog-list2" style="margin-top: 30px;">
-		<h4>Tags</h4>
-		<ul>
-			<li><a href="index.html">OakShow</a></li>
-			<li><a href="Indian.html">Indian Cinema</a></li>
-			<li><a href="Hollywood.html">Hollywood</a></li>
-			<li><a href="Series.html">Series</a></li>
-			<li><a href="Games.html">Games</a></li>
-			<li><a href="Sports.html">Sports</a></li>
-		</ul>
-	</div>
-
-	<div class="clearfix"> </div>
-	<nav>
-		<ul class="pagination">
-			<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-			<li class="active"><a href="#">Fresh <span class="sr-only">(current)</span></a></li>
-			<li><a href="OakShowReviews2020.html">2020</a></li>
-			<li><a href="OakShowReviews2019.html">2019</a></li>
-			<li><a href="OakShowReviews2018.html">2018</a></li>
-			<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-		</ul>
-	</nav>
-</div>
-</div>
-<!--//blog-->
-
-<!--footer-->
-<script language="javascript" type="text/javascript" src="footer.txt"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-77818206-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<!--//footer-->
+</noscript>
 </body>
 </html>
