@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style="color-scheme: light;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" id="theme-color-meta" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=oakshow3" />
+  <link rel="icon" type="image/png" sizes="300x300" href="/favicon.png?v=oakshow3" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=oakshow3" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=oakshow3" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=oakshow3" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=oakshow3" />
+  <script>
+    (function() {
+      try {
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth && window.innerWidth <= 768);
+        var savedTheme = localStorage.getItem('oakshow_theme_v3') || localStorage.getItem('oakshow_theme_v2') || localStorage.getItem('oakshow_theme');
+        if (!localStorage.getItem('oakshow_theme_v3')) {
+          savedTheme = isMobile ? 'dark' : 'light';
+          localStorage.setItem('oakshow_theme_v3', savedTheme);
+        }
+        var t = (savedTheme === 'dark') ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
+
+        // Immediately sync mobile browser theme-color status bar before initial paint
+        var themeColor = (t === 'dark') ? '#030813' : '#ffffff';
+        var metaTheme = document.getElementById('theme-color-meta') || document.querySelector('meta[name="theme-color"]');
+        if (metaTheme) {
+          metaTheme.setAttribute('content', themeColor);
+        }
+
+        // Synchronously derive and set initial document.title before Analytics loads
+        var path = window.location.pathname || '';
+        var rawSlug = path.replace(/^\/+|\.html$/gi, '').replace(/^(movies|series|films)\//i, '');
+        if (rawSlug && rawSlug !== 'index' && rawSlug !== 'home' && rawSlug !== 'discover') {
+          var readable = rawSlug.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[-_]/g, ' ');
+          document.title = readable + ' All Ratings, Reviews, Songs, Videos, Bookings and News — OakShow';
+        }
+      } catch(e) {}
+    })();
+  </script>
+  <style>
+    noscript {
+      display: none !important;
+    }
+    /* Hide Firebase Auth background iframe and prevent it from rendering a white bar or top scroll offset on mobile dark theme */
+    iframe[src*="firebaseapp.com"],
+    iframe[src*="/__/auth/"],
+    iframe[id^="I0_"],
+    iframe[name^="I0"],
+    iframe[ng-non-bindable] {
+      position: fixed !important;
+      top: -9999px !important;
+      left: -9999px !important;
+      width: 0 !important;
+      height: 0 !important;
+      border: 0 !important;
+      outline: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      clip-path: inset(50%) !important;
+      background: transparent !important;
+      color-scheme: dark !important;
+      z-index: -99999 !important;
+    }
+  </style>
+  
+  <title>Avatar All Ratings, Reviews, Songs, Videos, Bookings and News — OakShow</title>
+  <meta name="description" content="A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home. Directed by James Cameron, Avatar is the highest-grossing film in cinema history." />
+  <meta name="keywords" content="Avatar, Avatar 2009, James Cameron, Highest Grossing Movie in History, Pandora, Na'vi, Jake Sully, Neytiri, OakShow, movie reviews, ratings, cinema, Hollywood, Oscars" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://oakshow.in/Avatar.html" />
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:site_name" content="OakShow" />
+  <meta property="og:title" content="Avatar All Ratings, Reviews, Songs, Videos, Bookings and News — OakShow" />
+  <meta property="og:description" content="A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home. Directed by James Cameron, Avatar is the highest-grossing film in cinema history." />
+  <meta property="og:type" content="video.movie" />
+  <meta property="og:url" content="https://oakshow.in/Avatar.html" />
+  <meta property="og:image" content="https://oakshow.in/pics/Films/Avatar/2.jpg" />
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@OakShow" />
+  <meta name="twitter:creator" content="@OakShow" />
+  <meta name="twitter:title" content="Avatar All Ratings, Reviews, Songs, Videos, Bookings and News — OakShow" />
+  <meta name="twitter:description" content="A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home. Directed by James Cameron, Avatar is the highest-grossing film in cinema history." />
+  <meta name="twitter:image" content="https://oakshow.in/pics/Films/Avatar/2.jpg" />
+
+  <!-- Schema.org JSON-LD Organization Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Movie",
+  "name": "Avatar",
+  "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home. Directed by James Cameron, Avatar is the highest-grossing film in cinema history.",
+  "image": "https://oakshow.in/pics/Films/Avatar/2.jpg",
+  "url": "https://oakshow.in/Avatar.html",
+  "datePublished": "2009-12-18",
+  "director": {
+    "@type": "Person",
+    "name": "James Cameron"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "9.5/10",
+    "bestRating": "10",
+    "ratingCount": "100"
+  }
+}
+</script>
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K686R3P');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77818206-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-77818206-1', {
+      send_page_view: false
+    });
+  </script>
+  <!-- Legacy Google Analytics ga() support -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-77818206-1', 'auto');
+  </script>
+  <script type="module" crossorigin src="/assets/index-D9HLH6QE.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DdbxcpjV.css">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K686R3P"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="root"></div>
+<noscript>
+<div class="oakshow-crawler-fallback" style="padding:24px;font-family:sans-serif;color:#fff;background:#0d1117;">
+
+      <h1>Avatar (2009)</h1>
+      <p><strong>Tag:</strong> Highest Grossing Movie in History | <strong>Director:</strong> James Cameron | <strong>Genre:</strong> Sci-Fi, Action, Adventure, Fantasy | <strong>Language:</strong> English | <strong>OakShow Score:</strong> 9.5/10</p>
+      <p>A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home. Directed by James Cameron, Avatar is the highest-grossing film in cinema history.</p>
+      <p><strong>Worldwide Gross:</strong> $2.923 Billion | <strong>Oscars Won:</strong> 3 Academy Awards (Best Art Direction, Best Cinematography, Best Visual Effects)</p>
+      <p><a href="https://oakshow.in/">Explore OakShow Entertainment</a></p>
+    
+</div>
+</noscript>
+</body>
+</html>
