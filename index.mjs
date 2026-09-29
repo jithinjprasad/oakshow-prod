@@ -63,6 +63,18 @@ function resolveFilePath(pathname) {
     }
   }
 
+  // 2b. Case-insensitive HTML match in DIST_DIR (ensures /irumudi or /irumudi.html matches Irumudi.html on Linux)
+  const targetHtml = path.extname(cleanPath) ? cleanPath.toLowerCase() : `${cleanPath}.html`.toLowerCase();
+  if (targetHtml.endsWith('.html')) {
+    try {
+      const distFiles = fs.readdirSync(DIST_DIR);
+      const match = distFiles.find(f => f.toLowerCase() === targetHtml);
+      if (match) {
+        return path.resolve(DIST_DIR, match);
+      }
+    } catch (e) {}
+  }
+
   // 3. Fallback to workspace root (for pics, Profiles, Galleries, favicon.png, etc.)
   const resolvedRoot = path.resolve(__dirname, cleanPath);
   if (resolvedRoot.startsWith(__dirname) && fs.existsSync(resolvedRoot) && fs.statSync(resolvedRoot).isFile()) {
